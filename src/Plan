@@ -1,0 +1,33 @@
+FEATURES:
+1. Authorisation (login and sign up) [modal]
+2. Display business's services offered
+3. Search
+4. Add to favourites
+5. Book services
+
+
+Task Breakdowns
+1. Scaffold project folder- folders, pages, components, dependancies
+2. Autorization
+3. Routing
+4. Components
+5. Pages
+
+6. Components:
+-NavBar
+-Footer
+-Business card (for home page)
+-Business card (explore page)
+-Service card(business profile)
+-Search
+-Filter Panel
+-Favourite Button
+-Login
+-Sign Up
+
+7. Pages:
+-Home
+-About
+-Explore
+-Dashboard
+-Business Profile
