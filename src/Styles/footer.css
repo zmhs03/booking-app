@@ -1,0 +1,130 @@
+.footer-container {
+    background-color: #DE2E03;
+    color: white;
+    padding: 40px 60px 20px 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 80px;
+    flex: 1;
+}
+
+.support-container,
+.legal-container,
+.qlinks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.support-container h3,
+.legal-container h3,
+.qlinks-container h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    color: white;
+}
+
+.support-container a,
+.legal-container a,
+.qlinks-container a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+}
+
+.support-container a:hover,
+.legal-container a:hover,
+.qlinks-container a:hover {
+    opacity: 0.8;
+}
+
+.logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-container {
+    text-decoration: none;
+}
+
+.logo-container img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+.slogan {
+    font-size: 14px;
+    color: white;
+    font-style: italic;
+    margin: 8px 0 0 0;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+}
+
+.footer-divider {
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 0 0 20px 0;
+}
+
+.copyright {
+    text-align: right;
+    font-size: 12px;
+    color: white;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 30px 20px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .logo-section {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .copyright {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-links {
+        gap: 25px;
+    }
+    
+    .logo-container img {
+        height: 60px;
+    }
+}

@@ -1,0 +1,97 @@
+/* About Page Styles */
+.about-page {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: #e5e5e5;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.hero-content h2{
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+}
+
+/* Main Content */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+/* Content Sections */
+.content-section {
+  margin-bottom: 5rem;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Text Content */
+.text-content h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.subheading {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #374151;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Image Placeholder */
+.img {
+  background-color: #e5e5e5;
+  aspect-ratio: 1;
+  border-radius: 4px;
+}
+
+/* Reverse Layout for Second Section */
+.content-section.reverse .content-grid {
+  direction: rtl;
+}
+
+.content-section.reverse .text-content {
+  direction: ltr;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .main-content {
+    padding: 2rem 1rem;
+  }
+  
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .content-section.reverse .content-grid {
+    direction: ltr;
+  }
+  
+  .content-section {
+    margin-bottom: 3rem;
+  }
+}
