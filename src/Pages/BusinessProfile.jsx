@@ -1,9 +1,7 @@
-import React from 'react'
+import LeftSide from "../Components/LeftSide";
 
 function BusinessProfile() {
-  return (
-    <div>BusinessProfile</div>
-  )
+	return <div></div>;
 }
 
-export default BusinessProfile
+export default BusinessProfile;

@@ -1,166 +1,145 @@
-/* Hero Section Styles */
 .hero-container {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
 }
 
 .hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.6);
 }
 
 .hero-content {
-  position: relative;
-  z-index: 10;
-  text-align: center;
-  padding: 0 1rem;
-  max-width: 64rem;
-  margin: 0 auto;
+	position: relative;
+	z-index: 10;
+	text-align: center;
+	padding: 0 1rem;
+	max-width: 64rem;
+	margin: 0 auto;
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 2rem;
-  line-height: 1.2;
+	font-size: clamp(2.5rem, 5vw, 4rem);
+	font-weight: bold;
+	color: #fff;
+	margin-bottom: 2rem;
+	line-height: 1.2;
 }
 
 .search-container {
-  position: relative;
-  max-width: 32rem;
-  margin: 0 auto;
+	position: relative;
+	max-width: 32rem;
+	margin: 0 auto;
 }
 
 .search-input-wrapper {
-  position: relative;
+	position: relative;
 }
 
 .search-input {
-  width: 100%;
-  padding: 1rem 1.5rem;
-  padding-right: 3.5rem;
-  font-size: 1.125rem;
-  border-radius: 9999px;
-  border: none;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  outline: none;
-  transition: all 0.2s;
+	width: 100%;
+	padding: 1rem 1.5rem;
+	padding-right: 3.5rem;
+	font-size: 1.125rem;
+	border-radius: 9999px;
+	border: none;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+	outline: none;
+	transition: all 0.2s;
 }
 
 .search-input:focus {
-  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
+	box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
 }
 
 .search-button {
-  position: absolute;
-  right: 0.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0.75rem;
-  color: #6b7280;
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: color 0.2s;
+	position: absolute;
+	right: 0.5rem;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 0.75rem;
+	color: #6b7280;
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: color 0.2s;
 }
 
 .search-button:hover {
-  color: #374151;
+	color: #374151;
 }
 
 .service-categories {
-  margin-top: 3rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+	margin-top: 3rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
 }
 
 .service-button {
-  padding: 0.5rem 1.5rem;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
-  border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  cursor: pointer;
-  transition: all 0.2s;
-  backdrop-filter: blur(4px);
+	padding: 0.5rem 1.5rem;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: white;
+	border-radius: 9999px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	cursor: pointer;
+	transition: all 0.2s;
+	backdrop-filter: blur(4px);
 }
 
 .service-button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.scroll-indicator {
-  position: absolute;
-  bottom: 2.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.scroll-indicator-circle {
-  width: 1.5rem;
-  height: 2.5rem;
-  border: 2px solid white;
-  border-radius: 9999px;
-  display: flex;
-  justify-content: center;
-}
-
-.scroll-indicator-dot {
-  width: 0.25rem;
-  height: 0.75rem;
-  background-color: white;
-  border-radius: 9999px;
-  margin-top: 0.5rem;
-  animation: bounce 1s infinite;
+	background-color: rgba(255, 255, 255, 0.3);
 }
 
 @keyframes bounce {
-  0%, 20%, 53%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40%, 43% {
-    transform: translateY(-8px);
-  }
-  70% {
-    transform: translateY(-4px);
-  }
+	0%,
+	20%,
+	53%,
+	80%,
+	100% {
+		transform: translateY(0);
+	}
+	40%,
+	43% {
+		transform: translateY(-8px);
+	}
+	70% {
+		transform: translateY(-4px);
+	}
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .hero-content {
-    padding: 0 0.5rem;
-  }
-  
-  .service-categories {
-    margin-top: 2rem;
-    gap: 0.5rem;
-  }
-  
-  .service-button {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-  }
+	.hero-content {
+		padding: 0 0.5rem;
+	}
+
+	.service-categories {
+		margin-top: 2rem;
+		gap: 0.5rem;
+	}
+
+	.service-button {
+		padding: 0.5rem 1rem;
+		font-size: 0.875rem;
+	}
 }

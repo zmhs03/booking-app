@@ -1,0 +1,175 @@
+.left-side-container {
+	width: 100%;
+	max-width: 400px;
+	background: white;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Business Image */
+.business-image-container {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+}
+
+.business-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	background-color: #e0e0e0;
+}
+
+/* Map Section */
+.map-container {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	background: #f5f5f5;
+	overflow: hidden;
+}
+
+.map-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.map-marker {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	z-index: 2;
+}
+
+.marker-pin {
+	width: 24px;
+	height: 32px;
+	background: #ea4335;
+	border-radius: 50% 50% 50% 0;
+	transform: rotate(-45deg);
+	position: relative;
+}
+
+.marker-pin::after {
+	content: "";
+	width: 12px;
+	height: 12px;
+	background: white;
+	border-radius: 50%;
+	position: absolute;
+	top: 6px;
+	left: 6px;
+}
+
+.map-info {
+	position: absolute;
+	bottom: 8px;
+	left: 8px;
+	background: white;
+	padding: 8px 12px;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	font-size: 12px;
+}
+
+.business-name {
+	font-weight: 600;
+	color: #333;
+	margin-bottom: 2px;
+}
+
+.business-address {
+	color: #666;
+	font-size: 11px;
+}
+
+/* Business Hours Section */
+.business-hours-section {
+	padding: 20px;
+	border-bottom: 1px solid #eee;
+}
+
+.section-title {
+	font-size: 16px;
+	font-weight: 600;
+	color: #333;
+	margin: 0 0 16px 0;
+}
+
+.hours-list {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.hours-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 14px;
+}
+
+.day {
+	color: #333;
+	font-weight: 500;
+}
+
+.hours {
+	color: #666;
+}
+
+/* Phone Section */
+.phone-section {
+	padding: 20px;
+}
+
+.phone-link {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: #1a73e8;
+	font-size: 16px;
+	transition: color 0.2s ease;
+}
+
+.phone-link:hover {
+	color: #1557b0;
+}
+
+.phone-icon {
+	font-size: 18px;
+	margin-right: 12px;
+}
+
+.phone-number {
+	font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.left-side-container {
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	.business-image-container,
+	.map-container {
+		height: 180px;
+	}
+
+	.section-title {
+		font-size: 15px;
+	}
+
+	.hours-row {
+		font-size: 13px;
+	}
+
+	.phone-link {
+		font-size: 15px;
+	}
+}

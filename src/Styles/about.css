@@ -1,97 +1,318 @@
 /* About Page Styles */
 .about-page {
-  min-height: 100vh;
+	min-height: 100vh;
 }
 
 /* Hero Section */
 .hero-section {
-  background-color: #e5e5e5;
-  padding: 6rem 0;
-  text-align: center;
+	background-color: #e5e5e5;
+	padding: 6rem 0;
+	text-align: center;
 }
 
-.hero-content h2{
-  font-size: 3rem;
-  font-weight: bold;
-  color: #000;
-  margin: 0;
+.hero-content h2 {
+	font-size: 42px;
+	font-weight: bold;
+	color: #000;
+	margin: 0;
 }
 
-/* Main Content */
 .main-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 4rem 2rem;
 }
 
-/* Content Sections */
 .content-section {
-  margin-bottom: 5rem;
+	margin-bottom: 5rem;
 }
 
 .content-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+	align-items: center;
 }
 
-/* Text Content */
-.text-content h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #000;
-  margin-bottom: 0.5rem;
+.text-content h4 {
+	font-size: 32px;
+	font-weight: bold;
+	color: #000;
+	margin-bottom: 0.5rem;
+	margin-left: 80px;
 }
 
-.subheading {
-  font-size: 0.875rem;
-  color: #666;
-  margin-bottom: 1rem;
+.what-text h4 {
+	font-size: 32px;
+	font-weight: bold;
+	color: #000;
+	margin-bottom: 0.5rem;
+	margin-right: 80px;
 }
 
 .description {
-  color: #374151;
-  line-height: 1.6;
-  margin: 0;
+	color: #000;
+	line-height: 1.6;
+	justify-content: center;
+	margin-left: 80px;
+}
+.offer-description {
+	color: #000;
+	line-height: 1.6;
+	justify-content: center;
+	margin-right: 80px;
 }
 
-/* Image Placeholder */
-.img {
-  background-color: #e5e5e5;
-  aspect-ratio: 1;
-  border-radius: 4px;
+.who-img {
+	height: 250px;
+	width: 450px;
+	display: block;
+	border-radius: 8px;
+	margin-bottom: 10px;
+	object-fit: cover;
+	margin-top: 80px;
+	transform: translateX(30%);
 }
 
-/* Reverse Layout for Second Section */
+.what-img {
+	height: 250px;
+	width: 450px;
+	display: block;
+	border-radius: 8px;
+	margin-bottom: 10px;
+	object-fit: cover;
+	margin-top: 80px;
+	transform: translateX(30%);
+}
+
+.values-img {
+	height: 250px;
+	width: 450px;
+	display: block;
+	border-radius: 8px;
+	margin-bottom: 10px;
+	object-fit: cover;
+	margin-top: 80px;
+	transform: translateX(30%);
+}
 .content-section.reverse .content-grid {
-  direction: rtl;
+	direction: rtl;
 }
 
 .content-section.reverse .text-content {
-  direction: ltr;
+	direction: ltr;
 }
 
-/* Mobile Responsive */
+.faq-container {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 60px 20px;
+	background-color: #fff;
+}
+
+.faq-header {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.faq-badge {
+	display: inline-block;
+	background-color: #fff;
+	color: #de2e03;
+	padding: 8px 20px;
+	border-radius: 25px;
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+	border: 1px solid #ef9a85;
+}
+
+.faq-title {
+	font-size: 32px;
+	font-weight: 800;
+	color: #000;
+	margin: 0 0 20px 0;
+	line-height: 1.1;
+	letter-spacing: -0.5px;
+}
+
+.faq-subtitle {
+	font-size: 16px;
+	color: #000;
+	line-height: 1.7;
+	max-width: 650px;
+	margin: 0 auto;
+}
+
+.faq-list {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.faq-item {
+	background-color: #ffffff;
+	border-bottom: 1px solid #e0e0e0;
+	transition: all 0.2s ease;
+}
+
+.faq-item:last-child {
+	border-bottom: none;
+}
+
+.faq-item.open {
+	background-color: #fff;
+}
+
+.faq-question {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 24px 30px;
+	background: none;
+	border: none;
+	text-align: left;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	font-size: 17px;
+	font-weight: 600;
+	color: #000;
+	line-height: 1.4;
+}
+
+.faq-question:hover {
+	background-color: #e0e0e0;
+}
+
+.faq-item.open .faq-question {
+	background-color: #e0e0e0;
+	border-bottom: 1px solid #ef9a85;
+}
+
+.question-number {
+	color: #de2e03;
+	font-weight: 700;
+	margin-right: 12px;
+	min-width: 24px;
+	font-size: 17px;
+}
+
+.question-text {
+	flex: 1;
+	margin-right: 20px;
+}
+
+.faq-icon {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background-color: #de2e03;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	font-weight: 400;
+	transition: all 0.2s ease;
+	box-shadow: 0 2px 4px rgba(255, 107, 53, 0.3);
+}
+
+.faq-item.open .faq-icon {
+	background-color: #de2e03;
+	transform: rotate(0deg);
+}
+
+.faq-answer {
+	padding: 0 30px 30px 30px;
+	animation: slideDown 0.3s ease;
+	border-top: 1px solid #ef9a85;
+}
+
+.faq-answer p {
+	margin: 20px 0 0 0;
+	color: #000;
+	line-height: 1.7;
+	font-size: 15px;
+	padding-left: 36px;
+}
+
+@keyframes slideDown {
+	from {
+		opacity: 0;
+		max-height: 0;
+		padding-top: 0;
+	}
+	to {
+		opacity: 1;
+		max-height: 200px;
+		padding-top: 0;
+	}
+}
+
 @media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-  
-  .main-content {
-    padding: 2rem 1rem;
-  }
-  
-  .content-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .content-section.reverse .content-grid {
-    direction: ltr;
-  }
-  
-  .content-section {
-    margin-bottom: 3rem;
-  }
+	.faq-container {
+		padding: 40px 16px;
+	}
+
+	.faq-title {
+		font-size: 32px;
+	}
+
+	.faq-subtitle {
+		font-size: 15px;
+	}
+
+	.faq-question {
+		padding: 20px 24px;
+		font-size: 16px;
+	}
+
+	.faq-icon {
+		width: 32px;
+		height: 32px;
+		font-size: 18px;
+	}
+
+	.faq-answer {
+		padding: 0 24px 24px 24px;
+	}
+
+	.faq-answer p {
+		font-size: 14px;
+		padding-left: 32px;
+	}
+
+	.question-number {
+		font-size: 16px;
+		min-width: 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero-content h1 {
+		font-size: 2.5rem;
+	}
+
+	.main-content {
+		padding: 2rem 1rem;
+	}
+
+	.content-grid {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.content-section.reverse .content-grid {
+		direction: ltr;
+	}
+
+	.content-section {
+		margin-bottom: 3rem;
+	}
 }

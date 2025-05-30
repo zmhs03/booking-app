@@ -1,5 +1,5 @@
 import React, { useContext, useState, useRef, useEffect } from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import { AuthContext } from "../Context/AuthContext";
 import { useNavigate } from "react-router";
 import { FiSearch, FiUser } from "react-icons/fi";
@@ -71,15 +71,30 @@ function Navbar() {
 						<div className="nav-links">
 							{isAuthenticated ? (
 								<>
-									<Link to="/" className="nav-link">
+									<NavLink
+										to="/"
+										className={({ isActive }) =>
+											isActive ? "nav-link active-link" : "nav-link"
+										}
+									>
 										Home
-									</Link>
-									<Link to="/About" className="nav-link">
+									</NavLink>
+									<NavLink
+										to="/About"
+										className={({ isActive }) =>
+											isActive ? "nav-link active-link" : "nav-link"
+										}
+									>
 										About Us
-									</Link>
-									<Link to="/Explore" className="nav-link">
+									</NavLink>
+									<NavLink
+										to="/Explore"
+										className={({ isActive }) =>
+											isActive ? "nav-link active-link" : "nav-link"
+										}
+									>
 										Explore
-									</Link>
+									</NavLink>
 
 									<button className="icon-button">
 										<FiSearch size={20} />

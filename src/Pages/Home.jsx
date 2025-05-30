@@ -5,7 +5,6 @@ import "../Styles/home.css";
 import "../Styles/hero.css";
 import heroImg from "../Assets/blake-wisz-GFrBMipOd_E-unsplash.jpg";
 import BusinessCardHome from "../Components/BusinessCardHome";
-import Footer from "../Components/Footer";
 
 function Home() {
 	const { isAuthenticated } = useContext(AuthContext);
@@ -106,10 +105,7 @@ function Home() {
 	);
 
 	return (
-		<div>
-			{isAuthenticated ? <LoggedInView /> : <LoggedOutView />}
-			<Footer />
-		</div>
+		<div>{isAuthenticated ? <LoggedInView /> : <LoggedOutView />}</div>
 	);
 }
 

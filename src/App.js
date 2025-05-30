@@ -1,41 +1,40 @@
-import './App.css';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router';
+import "./App.css";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router";
 import Home from "./Pages/Home";
 import Explore from "./Pages/Explore";
 import About from "./Pages/About";
-import Login from './Components/Login';
-import SignUp from './Components/SignUp';
-import Navbar from './Components/Navbar';
-import Dashboard from"./Pages/Dashboard";
-import BusinessProfile from './Pages/BusinessProfile'
-import AuthProvider, {AuthContext} from './Context/AuthContext';
-import { useContext } from 'react';
+import Login from "./Components/Login";
+import SignUp from "./Components/SignUp";
+import Footer from "./Components/Footer";
+import Navbar from "./Components/Navbar";
+import Dashboard from "./Pages/Dashboard";
+import BusinessProfile from "./Pages/BusinessProfile";
+import AuthProvider, { AuthContext } from "./Context/AuthContext";
+import { useContext } from "react";
 
-function ProtectedRoute({children}){
-  const{isAuthenticated}= useContext(AuthContext);
-  return isAuthenticated ? children : <Navigate to={"/Login"}/>;
+function ProtectedRoute({ children }) {
+	const { isAuthenticated } = useContext(AuthContext);
+	return isAuthenticated ? children : <Navigate to={"/Login"} />;
 }
 
-
 function App() {
-  return (
-    <AuthProvider>
-    <BrowserRouter>
-    <Navbar/>
-    <Routes>
-<Route path="/" element={<Home />} />
-<Route path="/Login" element={<Login/>}/>
-<Route path="/SignUp" element={<SignUp/>}/>
-<Route path="/About" element={<About/>}/>
-<Route path="/Explore" element={<Explore/>}/>
-<Route path="/business/:id" element={<BusinessProfile />} />
-<Route path="/Dashboard" element={Dashboard}/>
-
-
-    </Routes>
-    </BrowserRouter>
-    </AuthProvider>
-  )
+	return (
+		<AuthProvider>
+			<BrowserRouter>
+				<Navbar />
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/Login" element={<Login />} />
+					<Route path="/SignUp" element={<SignUp />} />
+					<Route path="/About" element={<About />} />
+					<Route path="/Explore" element={<Explore />} />
+					<Route path="/business/:id" element={<BusinessProfile />} />
+					<Route path="/Dashboard" element={Dashboard} />
+				</Routes>
+				<Footer />
+			</BrowserRouter>
+		</AuthProvider>
+	);
 }
 
 export default App;

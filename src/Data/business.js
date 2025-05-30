@@ -64,6 +64,7 @@ export const businessDetails = [
 		tel: "(011)314-1598 ",
 		rating: "4.5",
 		reviews: "Placeholder text for now",
+		category: "Beauty",
 	},
 
 	{
@@ -108,6 +109,7 @@ export const businessDetails = [
 		tel: " (010) 597-8332",
 		rating: "4.1",
 		reviews: "",
+		category: "Pet",
 	},
 
 	{
@@ -152,6 +154,7 @@ export const businessDetails = [
 		tel: "(010) 823-4412",
 		rating: "4.2",
 		reviews: "",
+		category: "Medical",
 	},
 
 	{
@@ -196,6 +199,7 @@ export const businessDetails = [
 		tel: "(010) 834-2201",
 		rating: "4.6",
 		reviews: "",
+		category: "Medical",
 	},
 	{
 		id: 5,
@@ -240,6 +244,7 @@ export const businessDetails = [
 		tel: "(011) 622-9098",
 		rating: "4.0",
 		reviews: "",
+		category: "Beauty",
 	},
 	{
 		id: 6,
@@ -283,6 +288,7 @@ export const businessDetails = [
 		tel: "(031) 561-7400",
 		rating: "4.2",
 		reviews: "",
+		category: "Beauty",
 	},
 	{
 		id: 7,
@@ -327,6 +333,7 @@ export const businessDetails = [
 		tel: "(011) 568-2109",
 		rating: "3.8",
 		reviews: "",
+		category: "Medical",
 	},
 	{
 		id: 8,
@@ -370,6 +377,7 @@ export const businessDetails = [
 		tel: "(011) 475-3336",
 		rating: "3.8",
 		reviews: "",
+		category: "Tutoring",
 	},
 	{
 		id: 9,
@@ -413,6 +421,7 @@ export const businessDetails = [
 		tel: "(012) 347-8911",
 		rating: "4.3",
 		reviews: "",
+		category: "Medical",
 	},
 	{
 		id: 10,
@@ -456,6 +465,7 @@ export const businessDetails = [
 		tel: "(011) 781-4470",
 		rating: "4.4",
 		reviews: "",
+		category: "Beauty",
 	},
 	{
 		id: 11,
@@ -499,6 +509,7 @@ export const businessDetails = [
 		tel: "(011) 918-5523",
 		rating: "4.2",
 		reviews: "",
+		category: "Pet",
 	},
 	{
 		id: 12,
@@ -542,6 +553,7 @@ export const businessDetails = [
 		tel: "(010) 224-1134",
 		rating: "4.1",
 		reviews: "",
+		category: "Beauty",
 	},
 	{
 		id: 13,
@@ -585,6 +597,7 @@ export const businessDetails = [
 		tel: "(011) 404-3122",
 		rating: "4.4",
 		reviews: "",
+		category: "Beauty",
 	},
 	{
 		id: 14,
@@ -628,6 +641,7 @@ export const businessDetails = [
 		tel: "(011) 882-0065",
 		rating: "4.2",
 		reviews: "",
+		category: "Security",
 	},
 	{
 		id: 15,
@@ -671,6 +685,7 @@ export const businessDetails = [
 		tel: "(011) 764-7819",
 		rating: "4.6",
 		reviews: "",
+		category: "Pet",
 	},
 	{
 		id: 16,
@@ -714,6 +729,7 @@ export const businessDetails = [
 		tel: "(011) 760-1993",
 		rating: "4.9",
 		reviews: "",
+		category: "Cleaning",
 	},
 	{
 		id: 17,
@@ -757,5 +773,6 @@ export const businessDetails = [
 		tel: "(011) 447-5081",
 		rating: "3.6",
 		reviews: "",
+		category: "Beauty",
 	},
 ];
