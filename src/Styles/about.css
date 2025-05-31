@@ -50,7 +50,13 @@
 	margin-right: 80px;
 }
 
-.description {
+.who-description {
+	color: #000;
+	line-height: 1.6;
+	justify-content: center;
+	margin-left: 100px;
+}
+.values-description {
 	color: #000;
 	line-height: 1.6;
 	justify-content: center;
@@ -102,6 +108,7 @@
 .content-section.reverse .text-content {
 	direction: ltr;
 }
+/* ===========================================================FAQs=================================================================== */
 
 .faq-container {
 	max-width: 900px;

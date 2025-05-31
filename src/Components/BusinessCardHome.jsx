@@ -14,7 +14,7 @@ function BusinessCardHome() {
 				<div className="business-box" key={business.id}>
 					<div className="business-logo">
 						<img
-							className="business-img"
+							className="business-images"
 							src={business.image}
 							alt={business.name}
 						/>

@@ -54,11 +54,6 @@ const FAQ = () => {
 		<div className="faq-container">
 			<div className="faq-header">
 				<h2 className="faq-title">Frequently Asked Questions</h2>
-				<p className="faq-subtitle">
-					You can find answers to most our various construction work and
-					related network on our FAQ section. Please feel free to contact
-					us if you don't get your questions answer in below.
-				</p>
 			</div>
 
 			<div className="faq-list">

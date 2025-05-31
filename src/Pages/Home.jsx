@@ -5,6 +5,8 @@ import "../Styles/home.css";
 import "../Styles/hero.css";
 import heroImg from "../Assets/blake-wisz-GFrBMipOd_E-unsplash.jpg";
 import BusinessCardHome from "../Components/BusinessCardHome";
+import Windows from "../Assets/windows-SwHvzwEzCfA-unsplash.jpg";
+import Macbook from "../Assets/patrick-tomasso-fMntI8HAAB8-unsplash.jpg"; //Photo by Patrick Tomasso on Unsplash
 
 function Home() {
 	const { isAuthenticated } = useContext(AuthContext);
@@ -57,21 +59,33 @@ function Home() {
 				<BusinessCardHome />
 			</section>
 
-			<section id="mini-about">
-				<p>
-					Say goodbye to juggling emails, texts, and scattered
-					confirmations. With All Set, you can view, manage, and update all
-					your appointments in one simple dashboard. Whether you're booking
-					a haircut, massage, or meeting, everything is streamlined for
-					your convenience.
-				</p>
-				<p>
-					Explore a wide range of trusted businesses from beauty and
-					wellness to home services and more without hopping between
-					different websites. Compare prices, read reviews, and book
-					instantly. It's never been easier to find and secure the services
-					that fit your school and lifestyle.
-				</p>
+			<section className="content-section">
+				<div className="content-grid">
+					<div className="text-content">
+						<p className="sentence-1">
+							Say goodbye to juggling emails, texts, and scattered
+							confirmations. With All Set, you can view, manage, and update
+							all your appointments in one simple dashboard. Whether you're
+							booking a haircut, massage, or meeting, everything is
+							streamlined for your convenience.
+						</p>
+					</div>
+					<img className="sen1-img" src={Windows} />
+				</div>
+			</section>
+			<section className="content-section-reverse">
+				<div className="content-grid">
+					<img className="sen2-img" src={Macbook} />
+					<div className="sen2-text">
+						<p className="sentence-2">
+							Explore a wide range of trusted businesses from beauty and
+							wellness to home services and more without hopping between
+							different websites. Compare prices, read reviews, and book
+							instantly. It's never been easier to find and secure the
+							services that fit your schedule and lifestyle.
+						</p>
+					</div>
+				</div>
 			</section>
 		</div>
 	);
@@ -85,21 +99,33 @@ function Home() {
 				<BusinessCardHome />
 			</section>
 
-			<section id="mini-about">
-				<p>
-					Say goodbye to juggling emails, texts, and scattered
-					confirmations. With All Set, you can view, manage, and update all
-					your appointments in one simple dashboard. Whether you're booking
-					a haircut, massage, or meeting, everything is streamlined for
-					your convenience.
-				</p>
-				<p>
-					Explore a wide range of trusted businesses from beauty and
-					wellness to home services and more without hopping between
-					different websites. Compare prices, read reviews, and book
-					instantly. It's never been easier to find and secure the services
-					that fit your schedule and lifestyle.
-				</p>
+			<section className="content-section">
+				<div className="content-grid">
+					<div className="text-content">
+						<p className="sentence-1">
+							Say goodbye to juggling emails, texts, and scattered
+							confirmations. With All Set, you can view, manage, and update
+							all your appointments in one simple dashboard. Whether you're
+							booking a haircut, massage, or meeting, everything is
+							streamlined for your convenience.
+						</p>
+					</div>
+					<img className="sen1-img" src={Windows} />
+				</div>
+			</section>
+			<section className="content-section-reverse">
+				<div className="content-grid">
+					<img className="sen2-img" src={Macbook} />
+					<div className="sen2-text">
+						<p className="sentence-2">
+							Explore a wide range of trusted businesses from beauty and
+							wellness to home services and more without hopping between
+							different websites. Compare prices, read reviews, and book
+							instantly. It's never been easier to find and secure the
+							services that fit your schedule and lifestyle.
+						</p>
+					</div>
+				</div>
 			</section>
 		</div>
 	);

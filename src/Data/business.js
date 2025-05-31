@@ -43,7 +43,7 @@ export const businessDetails = [
 			},
 			{
 				name: "Eyebrow Threading",
-				duration: "30",
+				duration: "30 min",
 				price: "200",
 			},
 			{
@@ -123,7 +123,7 @@ export const businessDetails = [
 		services: [
 			{
 				name: "Oral Exam",
-				duration: "60",
+				duration: "60 min",
 				price: "700",
 			},
 			{

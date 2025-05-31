@@ -7,6 +7,38 @@ import { businessDetails } from "../Data/business";
 
 const ITEMS_PER_PAGE = 6;
 
+// Helper function to generate pagination pages
+const generatePaginationPages = (current, total) => {
+	const pages = [];
+
+	// Always show first page
+	if (current > 3) {
+		pages.push(1);
+		if (current > 4) {
+			pages.push("...");
+		}
+	}
+
+	// Show pages around current page
+	for (
+		let i = Math.max(1, current - 2);
+		i <= Math.min(total, current + 2);
+		i++
+	) {
+		pages.push(i);
+	}
+
+	// Always show last page
+	if (current < total - 2) {
+		if (current < total - 3) {
+			pages.push("...");
+		}
+		pages.push(total);
+	}
+
+	return pages;
+};
+
 function BusinessCardExplore() {
 	const [currentPage, setCurrentPage] = useState(1);
 	const [selectedCategory, setSelectedCategory] = useState("All");
@@ -16,7 +48,7 @@ function BusinessCardExplore() {
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	}, [currentPage]);
 
-	// Extract unique services for filter dropdown
+	// Extracts service categories for filter dropdown
 	const allCategories = [
 		"All",
 		...new Set(businessDetails.map((b) => b.category)),
@@ -29,7 +61,6 @@ function BusinessCardExplore() {
 			: businessDetails.filter((b) => b.category === selectedCategory);
 
 	// Sort businesses
-
 	if (sortBy === "AlphabeticalAZ") {
 		filteredBusinesses.sort((a, b) => a.name.localeCompare(b.name));
 	} else if (sortBy === "AlphabeticalZA") {
@@ -93,68 +124,109 @@ function BusinessCardExplore() {
 			</div>
 
 			<div className="business-container">
-				{currentBusinesses.map((business) => (
-					<Link
-						to={`/business/${business.id}`}
-						style={{ textDecoration: "none", color: "inherit" }}
-						key={business.id}
-					>
-						<div className="business-card">
-							<div className="business-image-container">
-								<img
-									className="business-image"
-									src={business.image}
-									alt={business.name}
-								/>
-							</div>
+				{currentBusinesses.map((business) => {
+					const firstService = business.services?.[0];
 
-							<div className="business-content">
-								<div className="business-header">
-									<div className="business-info">
-										<h3 className="business-name">{business.name}</h3>
-										<div className="business-rating">
-											<span className="rating-number">
+					return (
+						<Link
+							to={`/business/${business.id}`}
+							style={{ textDecoration: "none", color: "inherit" }}
+							key={business.id}
+						>
+							<div className="business-card">
+								<div className="business-img-container">
+									<img
+										className="business-img"
+										src={business.image}
+										alt={business.name}
+									/>
+								</div>
+
+								<div className="business-content">
+									<div className="business-header">
+										<div className="business-info">
+											<h3 className="business-title">{business.name}</h3>
+											<div className="business-ratings">
 												{business.rating}
+												<ImStarFull className="star-icon" />
+											</div>
+										</div>
+
+										<button className="favorite-btn">
+											<SlHeart className="heart-icon" />
+										</button>
+									</div>
+
+									<p className="business-address-container">
+										{business.address}
+									</p>
+									<div className="service-section">
+										<div className="service-left">
+											<h4 className="service-name">
+												{firstService?.name}
+											</h4>
+											<p className="service-duration">
+												{firstService?.duration}
+											</p>
+										</div>
+
+										<div className="service-right">
+											<span className="service-price">
+												R {firstService?.price}
 											</span>
-											<ImStarFull className="star-icon" />
+											<button className="book-btn">Book</button>
 										</div>
 									</div>
-									<button className="favorite-btn">
-										<SlHeart className="heart-icon" />
-									</button>
-								</div>
-
-								<p className="business-address">{business.address}</p>
-
-								<div className="service-section">
-									<h4 className="service-name">{business.service}</h4>
-									<p className="service-duration">
-										{business.estimatedDuration}
-									</p>
-
-									<div className="service-booking">
-										<span className="service-price">
-											R {business.price}
-										</span>
-										<button className="book-btn">Book</button>
-									</div>
 								</div>
 							</div>
-						</div>
-					</Link>
-				))}
+						</Link>
+					);
+				})}
 			</div>
 
 			{/* Pagination Controls */}
 			<div className="pagination-controls">
-				<button onClick={handlePrev} disabled={currentPage === 1}>
+				<button
+					className="nav-button"
+					onClick={handlePrev}
+					disabled={currentPage === 1}
+				>
+					<svg viewBox="0 0 24 24" fill="currentColor">
+						<path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+					</svg>
 					Previous
 				</button>
-				<span>
-					Page {currentPage} of {totalPages}
-				</span>
-				<button onClick={handleNext} disabled={currentPage === totalPages}>
+
+				{generatePaginationPages(currentPage, totalPages).map(
+					(page, index) =>
+						page === "..." ? (
+							<button
+								key={`ellipsis-${index}`}
+								className="ellipsis"
+								disabled
+							>
+								...
+							</button>
+						) : (
+							<button
+								key={page}
+								className={page === currentPage ? "active" : ""}
+								onClick={() => setCurrentPage(page)}
+							>
+								{page}
+							</button>
+						)
+				)}
+
+				<button
+					className="nav-button"
+					onClick={handleNext}
+					disabled={currentPage === totalPages}
+				>
 					Next
+					<svg viewBox="0 0 24 24" fill="currentColor">
+						<path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+					</svg>
 				</button>
 			</div>
 		</div>

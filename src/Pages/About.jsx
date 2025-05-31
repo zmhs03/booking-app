@@ -19,7 +19,7 @@ function About() {
 					<div className="content-grid">
 						<div className="text-content">
 							<h4>Who we are?</h4>
-							<p className="description">
+							<p className="who-description">
 								Our enthusiastic team at ALL SET has dedicated themselves
 								to making your search for reliable service providers as
 								easy as possible. We put the greatest local companies at
@@ -65,7 +65,7 @@ function About() {
 					<div className="content-grid">
 						<div className="text-content">
 							<h4>Our Values</h4>
-							<p className="description">
+							<p className="values-description">
 								<ul>
 									<li>
 										Trust: We prioritise transparency and integrity in our
