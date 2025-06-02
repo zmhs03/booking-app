@@ -9,7 +9,7 @@ function BusinessCardHome() {
 		.slice(0, 3);
 
 	return (
-		<div className="business-container">
+		<div className="business-contr">
 			{topRatedBusinesses.map((business) => (
 				<div className="business-box" key={business.id}>
 					<div className="business-logo">
@@ -24,8 +24,8 @@ function BusinessCardHome() {
 						</p>
 					</div>
 					<div className="business-details">
-						<h3 className="business-name">{business.name}</h3>
-						<p className="business-address">{business.address}</p>
+						<h3 className="business-text">{business.name}</h3>
+						<p className="business-addr">{business.address}</p>
 					</div>
 				</div>
 			))}

@@ -1,4 +1,4 @@
-.business-container {
+.business-contr {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 20px;
@@ -24,16 +24,16 @@
 	object-fit: cover;
 	margin-bottom: 1px;
 }
-.business-name {
+.business-text {
 	font-size: 18px;
 	font-style: bold;
 	color: #000;
 	margin-top: 1px;
 }
 
-.business-address {
+.business-addr {
 	font-style: italic;
-	font-size: 14px;
+	font-size: 13px;
 }
 .business-rating {
 	position: absolute;

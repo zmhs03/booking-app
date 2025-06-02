@@ -1,23 +1,33 @@
-import React from "react";
-import { businessDetails } from "../Data/business";
+import "../Styles/businessProfile.css";
 
 function ServiceCard({ services }) {
 	return (
 		<section className="services-section">
-			<h3>Services</h3>
+			<div className="services-header">
+				<h3>Services</h3>
+				{/* <div className="search-container">
+					<input
+						type="text"
+						placeholder="Search for service"
+						className="search-input"
+					/>
+					<div className="search-icon">🔍</div>
+				</div> */}
+			</div>
+
 			{Array.isArray(services) &&
 				services.map((service, idx) => (
 					<div key={idx} className="service-card">
-						<div>
-							<p>
+						<div className="service-info">
+							<p className="service-name">
 								<strong>{service.name}</strong>
 							</p>
-							<p className="description">{service.description}</p>
 							<p className="duration">{service.duration}</p>
+							<p className="description">{service.description}</p>
 						</div>
 						<div className="price-booking">
-							<p>{service.price}</p>
-							<button>Book</button>
+							<p className="price">R {service.price}</p>
+							<button className="book-btn">Book</button>
 						</div>
 					</div>
 				))}

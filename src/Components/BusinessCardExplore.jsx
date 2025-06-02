@@ -7,33 +7,33 @@ import { businessDetails } from "../Data/business";
 
 const ITEMS_PER_PAGE = 6;
 
-// Helper function to generate pagination pages
+// Creates an array of pagination numbers (with ellipsis) depending on current and total pages
 const generatePaginationPages = (current, total) => {
 	const pages = [];
 
-	// Always show first page
+	// Adds first page if current page is far enough from the start
 	if (current > 3) {
-		pages.push(1);
+		pages.push(1); // Always start with page 1
 		if (current > 4) {
-			pages.push("...");
+			pages.push("..."); // Add ellipsis if there are skipped pages before current
 		}
 	}
 
-	// Show pages around current page
+	// Adds a dynamic range of pages around the current one (2 before and 2 after)
 	for (
 		let i = Math.max(1, current - 2);
 		i <= Math.min(total, current + 2);
 		i++
 	) {
-		pages.push(i);
+		pages.push(i); // Ensures we don't go below page 1 or above total pages
 	}
 
-	// Always show last page
+	// Adds last page if current page is far enough from the end
 	if (current < total - 2) {
 		if (current < total - 3) {
-			pages.push("...");
+			pages.push("..."); // Ellipsis if skipped pages after current
 		}
-		pages.push(total);
+		pages.push(total); // Always show the last page number
 	}
 
 	return pages;
@@ -60,7 +60,7 @@ function BusinessCardExplore() {
 			? businessDetails
 			: businessDetails.filter((b) => b.category === selectedCategory);
 
-	// Sort businesses
+	// Conditionally sorts businesses based on selected sort option
 	if (sortBy === "AlphabeticalAZ") {
 		filteredBusinesses.sort((a, b) => a.name.localeCompare(b.name));
 	} else if (sortBy === "AlphabeticalZA") {
@@ -71,6 +71,7 @@ function BusinessCardExplore() {
 		filteredBusinesses.sort((a, b) => a.rating - b.rating);
 	} else if (sortBy === "Default") {
 		for (let i = filteredBusinesses.length - 1; i > 0; i--) {
+			//Shuffles array randomly
 			const j = Math.floor(Math.random() * (i + 1));
 			[filteredBusinesses[i], filteredBusinesses[j]] = [
 				filteredBusinesses[j],
@@ -79,7 +80,7 @@ function BusinessCardExplore() {
 		}
 	}
 
-	const totalPages = Math.ceil(filteredBusinesses.length / ITEMS_PER_PAGE);
+	const totalPages = Math.ceil(filteredBusinesses.length / ITEMS_PER_PAGE); // Calculates how many total pages are needed based on filtered results
 	const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
 	const endIndex = startIndex + ITEMS_PER_PAGE;
 	const currentBusinesses = filteredBusinesses.slice(startIndex, endIndex);

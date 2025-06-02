@@ -1,39 +1,56 @@
-.left-side-container {
-	width: 100%;
-	max-width: 400px;
-	background: white;
-	border-radius: 8px;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-	overflow: hidden;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+.business-profile-container {
+	padding: 1rem;
+}
+/* =================================================COLUMNS========================================================= */
+.columns {
+	display: flex;
+	gap: 2rem;
+	align-items: flex-start;
+	flex-wrap: wrap;
 }
 
-/* Business Image */
+.left-container {
+	flex: 1;
+	min-width: 250px;
+	max-width: 300px;
+	column-gap: 20;
+}
+
+.right-container {
+	flex: 2;
+
+	min-width: 300px;
+}
+
+/*===========================================Business Image=========================================================*/
 .business-image-container {
 	width: 100%;
 	height: 200px;
-	overflow: hidden;
 }
 
-.business-image {
+.business-photo {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	background-color: #e0e0e0;
+	display: block;
 }
 
-/* Map Section */
+/*====================================================MAP SECTION=============================================== */
 .map-container {
 	position: relative;
 	width: 100%;
 	height: 200px;
-	background: #f5f5f5;
-	overflow: hidden;
+	background-color: #f8f9fa;
+	border-top: 1px solid #e9ecef;
+	border-bottom: 1px solid #e9ecef;
 }
 
+.map-embed,
 .map-image {
 	width: 100%;
 	height: 100%;
+	border: none;
+	display: block;
 	object-fit: cover;
 }
 
@@ -43,12 +60,13 @@
 	left: 50%;
 	transform: translate(-50%, -100%);
 	z-index: 2;
+	color: #de2e03;
 }
 
 .marker-pin {
 	width: 24px;
-	height: 32px;
-	background: #ea4335;
+	height: 24px;
+	background-color: #de2e03;
 	border-radius: 50% 50% 50% 0;
 	transform: rotate(-45deg);
 	position: relative;
@@ -56,48 +74,93 @@
 
 .marker-pin::after {
 	content: "";
-	width: 12px;
-	height: 12px;
-	background: white;
-	border-radius: 50%;
 	position: absolute;
-	top: 6px;
-	left: 6px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	width: 8px;
+	height: 8px;
+	background-color: #fff;
+	border-radius: 50%;
 }
 
-.map-info {
+.map-info-overlay {
 	position: absolute;
 	bottom: 8px;
 	left: 8px;
-	background: white;
-	padding: 8px 12px;
+	background: rgba(255, 255, 255, 0.95);
+	padding: 6px 10px;
 	border-radius: 4px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	font-size: 12px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	z-index: 10;
 }
 
+.map-placeholder {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px dashed #dee2e6;
+}
+
+.map-placeholder-content {
+	text-align: center;
+	padding: 20px;
+}
+
+.map-icon {
+	font-size: 32px;
+	margin-bottom: 12px;
+}
+
+.address-text {
+	margin-bottom: 16px;
+}
+
+.address-text .business-name,
 .business-name {
 	font-weight: 600;
+	font-size: 14px;
 	color: #333;
-	margin-bottom: 2px;
+	margin-bottom: 4px;
 }
 
+.address-text .business-address,
 .business-address {
+	font-size: 12px;
 	color: #666;
-	font-size: 11px;
+	line-height: 1.4;
 }
 
-/* Business Hours Section */
+.directions-link {
+	display: inline-block;
+	padding: 8px 16px;
+	background-color: #de2e03;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 4px;
+	font-size: 12px;
+	font-weight: 500;
+	transition: background-color 0.2s ease;
+}
+
+.directions-link:hover {
+	background-color: #ef9a85;
+}
+
+/*================================================BUSINESS HOURS============================================== */
 .business-hours-section {
 	padding: 20px;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #e9ecef;
 }
 
 .section-title {
+	margin: 0 0 16px 0;
 	font-size: 16px;
 	font-weight: 600;
 	color: #333;
-	margin: 0 0 16px 0;
 }
 
 .hours-list {
@@ -111,47 +174,258 @@
 	justify-content: space-between;
 	align-items: center;
 	font-size: 14px;
+	line-height: 1.4;
 }
 
 .day {
-	color: #333;
+	color: #000;
 	font-weight: 500;
+	flex: 1;
 }
 
 .hours {
 	color: #666;
+	text-align: right;
+	-space: nowrap;
 }
 
-/* Phone Section */
+.no-hours {
+	font-style: italics;
+	color: #828282;
+}
+
+/*=============================================TELEPHONE SECTION================================================================== */
 .phone-section {
-	padding: 20px;
+	padding: 16px 20px;
+	border-bottom: 1px solid #e5e5e5;
 }
 
-.phone-link {
+.tel-display {
 	display: flex;
 	align-items: center;
 	text-decoration: none;
-	color: #1a73e8;
-	font-size: 16px;
-	transition: color 0.2s ease;
-}
-
-.phone-link:hover {
-	color: #1557b0;
+	color: inherit;
+	gap: 12px;
 }
 
 .phone-icon {
-	font-size: 18px;
-	margin-right: 12px;
+	color: #666;
+	font-size: 16px;
+	flex-shrink: 0;
 }
 
 .phone-number {
-	font-weight: 500;
+	font-size: 16px;
+	color: #000;
+	font-weight: 400;
+}
+/* =======================================STAFF SECTION======================================================================== */
+.staff-section {
+	margin: 0;
+	padding: 20px 0;
+	border-bottom: 1px solid #e0e0e0;
 }
 
-/* Responsive Design */
+.staff-section h3 {
+	font-size: 32px;
+	font-weight: 600;
+	margin-bottom: 30px;
+	color: #000;
+}
+
+.staff-list {
+	display: flex;
+	gap: 20px;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.staff-member {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	min-width: 80px;
+}
+
+.staff-member img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	object-fit: cover;
+	background-color: #f0f0f0;
+	border: 2px solid #e0e0e0;
+	margin-bottom: 8px;
+}
+
+.staff-member p {
+	font-size: 14px;
+	color: #666;
+	margin: 0;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+/*======================================================ABOUT SECTION================================================================= */
+.about-business {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.about-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.about-header h2 {
+	font-size: 32px;
+	font-weight: 600;
+	margin-bottom: 30px;
+	color: #000;
+}
+
+.heart-icon {
+	font-size: 24px;
+	color: #6b7280;
+}
+
+.about-content h3 {
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: #000;
+	margin-bottom: 15px;
+}
+
+.about-text {
+	line-height: 1.6;
+	color: #000;
+}
+
+.about-text p {
+	margin-bottom: 1rem;
+}
+.loading {
+	font-style: italics;
+	color: #828282;
+}
+
+/* ===================================================SERVICES SECTION============================================================== */
+.services-section {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.services-section h3 {
+	font-size: 32px;
+	font-weight: 600;
+	margin-bottom: 30px;
+	color: #000;
+}
+
+.service-card {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 24px 0;
+	border-bottom: 1px solid #e0e0e0;
+	gap: 20px;
+}
+
+.service-card:last-of-type {
+	border-bottom: none;
+}
+
+.service-card > div:first-child {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.service-card strong {
+	font-size: 18px;
+	font-weight: 600;
+	color: #000;
+	margin-bottom: 2px;
+}
+
+.service-card .duration {
+	font-size: 14px;
+	color: #828282;
+	font-weight: 400;
+}
+
+.service-card .description {
+	font-size: 14px;
+	color: #333;
+	margin: 6px 0 4px;
+	line-height: 1.4;
+}
+
+.price-booking {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	flex-shrink: 0;
+}
+
+.price-booking p {
+	font-size: 18px;
+	font-weight: bold;
+	color: #000;
+	margin: 0;
+	min-width: 80px;
+	text-align: right;
+}
+
+.price-booking button {
+	background-color: #de2e03;
+	color: #fff;
+	border: none;
+	padding: 8px 20px;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	min-width: 70px;
+}
+
+.price-booking button:hover {
+	background-color: #ef9a85;
+}
+
+.price-booking button:active {
+	background-color: #de2e03;
+}
+
+.show-more {
+	width: 100%;
+	background: none;
+	border: none;
+	color: #000;
+	font-size: 16px;
+	font-weight: 500;
+	padding: 20px 0;
+	cursor: pointer;
+	text-align: center;
+	transition: color 0.3s ease;
+}
+
+.show-more:hover {
+	color: #ef9a85;
+}
+
+/*============================================================MEDIA QUERIES========================================================= */
 @media (max-width: 768px) {
-	.left-side-container {
+	.left-container {
 		max-width: 100%;
 		margin: 0 auto;
 	}
@@ -161,15 +435,73 @@
 		height: 180px;
 	}
 
+	.business-hours-section,
+	.phone-section,
+	.services-section {
+		padding: 16px;
+	}
+
 	.section-title {
 		font-size: 15px;
 	}
 
-	.hours-row {
+	.hours-row,
+	.phone-link {
 		font-size: 13px;
 	}
 
-	.phone-link {
-		font-size: 15px;
+	.services-section h3 {
+		font-size: 28px;
+		margin-bottom: 20px;
+	}
+
+	.service-card {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 12px;
+		padding: 20px 0;
+	}
+
+	.price-booking {
+		justify-content: space-between;
+		margin-top: 8px;
+	}
+
+	.price-booking p {
+		text-align: left;
+	}
+	#staff-section {
+		justify-content: center;
+	}
+	.staff-list {
+		gap: 15px;
+	}
+
+	.staff-member {
+		min-width: 70px;
+	}
+
+	.staff-member img {
+		width: 50px;
+		height: 50px;
+	}
+
+	.staff-member p {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 480px) {
+	.services-section h3 {
+		font-size: 24px;
+	}
+
+	.service-card strong {
+		font-size: 16px;
+	}
+
+	.price-booking button {
+		padding: 10px 16px;
+		font-size: 14px;
 	}
 }

@@ -1,10 +1,14 @@
 import { useParams } from "react-router";
 import { businessDetails } from "../Data/business";
-import LeftSide from "../Components/LeftSide";
+import Map from "../Components/Map";
+import Hours from "../Components/Hours";
 import AboutBusiness from "../Components/AboutBusiness";
 import Staff from "../Components/Staff";
 import Reviews from "../Components/Reviews";
 import ServiceCard from "../Components/ServiceCard";
+import Phone from "../Components/Phone";
+import "../Styles/businessProfile.css";
+import { IoMdArrowBack } from "react-icons/io";
 
 function BusinessProfile() {
 	const { id } = useParams();
@@ -16,13 +20,33 @@ function BusinessProfile() {
 
 	return (
 		<div className="business-profile-container">
-			<AboutBusiness business={business} />
-			<div className="profile-grid">
-				<LeftSide hours={business.hours} />
-				{/* <LeftSide phone={business.phone} map={business.mapImage} /> */}
+			<div className="columns">
+				<div className="left-container">
+					<button
+						className="back-btn"
+						onClick={() => window.history.back()}
+					>
+						<IoMdArrowBack />
+					</button>
+					<div className="business-image-container">
+						<img
+							src={business.image}
+							alt={business.name}
+							className="business-photo"
+						/>
+					</div>
+
+					<Map name={business.name} address={business.address} />
+					<Hours businessHours={business.businessHours} />
+					<Phone tel={business.tel} />
+				</div>
+
+				<div className="right-container">
+					<AboutBusiness business={business} />
+					<Staff staff={business.staff} />
+					<ServiceCard services={business.services} />
+				</div>
 			</div>
-			<Staff staff={business.staff} />
-			<ServiceCard services={business.services} />
 			<Reviews reviews={business.reviews} />
 		</div>
 	);
