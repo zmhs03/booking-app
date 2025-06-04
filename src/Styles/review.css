@@ -1,0 +1,96 @@
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+.modal-content {
+	background-color: #fff;
+	border-radius: 15px;
+	width: 90%;
+	max-width: 500px;
+	padding: 20px;
+	position: relative;
+	max-height: 90vh;
+	overflow-y: auto;
+}
+.review-text-header {
+	height: 40px;
+}
+.review-textArea {
+	width: 100%;
+	border-radius: 10px;
+
+	height: 80px;
+	margin-top: 0.5rem;
+	padding: 0.5rem;
+	resize: vertical;
+}
+
+.rating-input {
+	margin: 1rem 0;
+}
+
+.rating-input input {
+	border-radius: 3px;
+	height: 1.5rem;
+}
+
+.modal-buttons {
+	display: flex;
+	justify-content: flex-end;
+	gap: 1rem;
+}
+
+.modal-buttons button {
+	padding: 0.5rem 1rem;
+	border: none;
+	cursor: pointer;
+	border-radius: 6px;
+}
+
+.modal-buttons button:first-child {
+	background-color: #de2e03;
+	color: #fff;
+}
+
+.modal-buttons button:last-child {
+	background-color: #f0f0f0;
+	color: #000;
+}
+/* =========================================================RESPONSIVE DESIGN================================================ */
+
+@media (max-width: 480px) {
+	.modal-content {
+		width: 95%;
+		padding: 15px;
+		max-height: 85vh;
+	}
+
+	.review-textArea {
+		height: 70px;
+		padding: 0.4rem;
+		font-size: 14px;
+	}
+
+	.rating-input input {
+		width: 100%;
+		height: 1.8rem;
+	}
+
+	.modal-buttons {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.modal-buttons button {
+		width: 100%;
+	}
+}

@@ -1,8 +1,33 @@
-import { businessDetails } from "../Data/business";
 import "../Styles/businessProfile.css";
-import { SlHeart } from "react-icons/sl";
+import { IoHeart } from "react-icons/io5";
+import { IoHeartOutline } from "react-icons/io5";
 
 function AboutBusiness({ business }) {
+	const toggleFavourite = (businessId) => {
+		const savedFavourites = JSON.parse(
+			localStorage.getItem("favouriteBusinesses") || "[]"
+		);
+		let updatedFavourites;
+
+		if (savedFavourites.includes(businessId)) {
+			updatedFavourites = savedFavourites.filter(
+				(id) => id !== businessId
+			);
+		} else {
+			updatedFavourites = [...savedFavourites, businessId];
+		}
+
+		localStorage.setItem(
+			"favouriteBusinesses",
+			JSON.stringify(updatedFavourites)
+		);
+	};
+	const isFavourited = (businessId) => {
+		const savedFavourites = JSON.parse(
+			localStorage.getItem("favouriteBusinesses") || "[]"
+		);
+		return savedFavourites.includes(businessId);
+	};
 	if (!business || !business.name || !business.about) {
 		return <p className="loading">Loading business details...</p>;
 	}
@@ -13,8 +38,13 @@ function AboutBusiness({ business }) {
 		<section className="about-business">
 			<div className="about-header">
 				<h2>About {name}</h2>
-				<button className="favorite-btn" aria-label="Add to favorites">
-					<SlHeart className="heart-icon" />
+				<button
+					onClick={() => toggleFavourite(business.id)}
+					className={`favorite-btn ${
+						isFavourited(business.id) ? "active" : ""
+					}`}
+				>
+					{isFavourited(business.id) ? <IoHeart /> : <IoHeartOutline />}
 				</button>
 			</div>
 

@@ -10,6 +10,8 @@ const BookingModal = ({ isOpen, onClose, selectedService, business }) => {
 		selectedService ? [selectedService] : []
 	);
 	const [showCancelDialog, setShowCancelDialog] = useState(false);
+	const [showConfirmation, setShowConfirmation] = useState(false);
+
 	useEffect(() => {
 		const el = document.querySelector(".date-scroll");
 		if (!el) return;
@@ -120,16 +122,113 @@ const BookingModal = ({ isOpen, onClose, selectedService, business }) => {
 				services: bookedServices,
 				total: total,
 			});
+			setShowConfirmation(true);
 		}
 	};
+
+	const handleCloseModal = () => {
+		if (showConfirmation) {
+			// Reset all states when closing from confirmation
+			setShowConfirmation(false);
+			setBookedServices(selectedService ? [selectedService] : []);
+			setSelectedDate(null);
+			setSelectedTime(null);
+			onClose();
+		} else {
+			setShowCancelDialog(true);
+		}
+	};
+
+	const getSelectedDateObject = () => {
+		return dates.find((d) => d.date === selectedDate);
+	};
+
+	const formatDate = (dateObj) => {
+		if (!dateObj) return "";
+		const months = [
+			"Jan",
+			"Feb",
+			"Mar",
+			"Apr",
+			"May",
+			"Jun",
+			"Jul",
+			"Aug",
+			"Sep",
+			"Oct",
+			"Nov",
+			"Dec",
+		];
+		return `${dateObj.day}, ${dateObj.date} ${
+			months[dateObj.fullDate.getMonth()]
+		} ${dateObj.fullDate.getFullYear()}`;
+	};
+
+	if (showConfirmation) {
+		const selectedDateObj = getSelectedDateObject();
+
+		return (
+			<div className="booking-modal">
+				<div className="booking-container">
+					<button className="modal-close" onClick={handleCloseModal}>
+						<FiX size={20} />
+					</button>
+
+					<div className="confirmation-content">
+						<div className="confirmation-header">
+							<h3 className="modal-title">Booking Confirmed!</h3>
+							<p className="confirmation-subtitle">
+								Your appointment has been successfully booked
+							</p>
+						</div>
+
+						<div className="confirmation-details">
+							<div className="detail-section">
+								<h4>Date & Time</h4>
+								<p>{formatDate(selectedDateObj)}</p>
+								<p>
+									{selectedTime} - {calculateEndTime(selectedTime)}
+								</p>
+							</div>
+
+							<div className="detail-section">
+								<h4>Services</h4>
+								{bookedServices.map((service, idx) => (
+									<div key={idx} className="confirmed-service">
+										<span className="service-name">{service.name}</span>
+										<span className="service-price">
+											R{service.price.toFixed(2)}
+										</span>
+									</div>
+								))}
+							</div>
+
+							<div className="confirmation-total">
+								<div className="total-row">
+									<span>Total Amount:</span>
+									<strong>R{total.toFixed(2)}</strong>
+								</div>
+								<div className="total-duration">
+									Duration: {bookedServices.length * 45} minutes
+								</div>
+							</div>
+						</div>
+
+						<div className="confirmation-actions">
+							<button className="done-btn" onClick={handleCloseModal}>
+								Done
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		);
+	}
 
 	return (
 		<div className="booking-modal">
 			<div className="booking-container">
-				<button
-					className="modal-close"
-					onClick={() => setShowCancelDialog(true)}
-				>
+				<button className="modal-close" onClick={handleCloseModal}>
 					<FiX size={20} />
 				</button>
 
@@ -262,7 +361,9 @@ const BookingModal = ({ isOpen, onClose, selectedService, business }) => {
 								className="dialog-yes"
 								onClick={() => {
 									setShowCancelDialog(false);
-									setBookedServices([]);
+									setBookedServices(
+										selectedService ? [selectedService] : []
+									);
 									setSelectedDate(null);
 									setSelectedTime(null);
 									onClose();

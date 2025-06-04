@@ -2,12 +2,36 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import "../Styles/businessExplore.css";
 import { ImStarFull } from "react-icons/im";
-import { SlHeart } from "react-icons/sl";
+import { IoHeart } from "react-icons/io5";
+import { IoHeartOutline } from "react-icons/io5";
 import { businessDetails } from "../Data/business";
 import BookingModal from "../Components/BookingModal";
 
 const ITEMS_PER_PAGE = 6;
 
+const toggleFavourite = (businessId) => {
+	const savedFavourites = JSON.parse(
+		localStorage.getItem("favouriteBusinesses") || "[]"
+	);
+	let updatedFavourites;
+
+	if (savedFavourites.includes(businessId)) {
+		updatedFavourites = savedFavourites.filter((id) => id !== businessId);
+	} else {
+		updatedFavourites = [...savedFavourites, businessId];
+	}
+
+	localStorage.setItem(
+		"favouriteBusinesses",
+		JSON.stringify(updatedFavourites)
+	);
+};
+const isFavourited = (businessId) => {
+	const savedFavourites = JSON.parse(
+		localStorage.getItem("favouriteBusinesses") || "[]"
+	);
+	return savedFavourites.includes(businessId);
+};
 // Creates an array of pagination numbers (with ellipsis) depending on current and total pages
 const generatePaginationPages = (current, total) => {
 	const pages = [];
@@ -162,8 +186,17 @@ function BusinessCardExplore() {
 											</div>
 										</div>
 
-										<button className="favorite-btn">
-											<SlHeart className="heart-icon" />
+										<button
+											onClick={() => toggleFavourite(business.id)}
+											className={`favorite-btn ${
+												isFavourited(business.id) ? "active" : ""
+											}`}
+										>
+											{isFavourited(business.id) ? (
+												<IoHeart />
+											) : (
+												<IoHeartOutline />
+											)}
 										</button>
 									</div>
 

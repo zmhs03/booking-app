@@ -53,7 +53,9 @@ function About() {
 									</li>
 									<li>
 										<strong>Business Profiles:</strong> Find out more about
-										the services, costs, and availability of each supplier.
+										the services, costs, and availability of
+										<br />
+										each supplier.
 									</li>
 								</ul>
 							</p>
@@ -93,7 +95,9 @@ function About() {
 						<img className="values-img" src={values} />
 					</div>
 				</section>
-				<FAQ />
+				<section id="FAQ">
+					<FAQ />
+				</section>
 			</main>
 		</div>
 	);

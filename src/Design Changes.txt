@@ -1,0 +1,23 @@
+I have made design changes to the following:
+
+1. History (Dashboard):
+-I have removed the History section. It seemed redundant to include it as the user could 
+favourite their favourite businesses and revisit them for the services they would like to do.
+
+2. Search Bar (Home and Navbar):
+-Both the search bars in the homepage hero section and the navbar have been removed. 
+The hero section's search bar was interfering with page routing, while the navbar's search bar was generating persistent, 
+unexplained errors despite thorough debugging.
+
+3. Account (Dashboard):
+-Chose a cleaner interface that displays only input fields for user information.
+
+4. Log Out Button (Dashboard)
+- The log out functionality is already accessible via the navbar, avoiding duplication.
+
+
+
+
+
+
+

@@ -47,12 +47,6 @@
 	background: rgba(255, 255, 255, 0.3);
 }
 
-.search-section {
-	padding: 2rem;
-	text-align: center;
-	background: #f8f9fa;
-}
-
 .content-section {
 	margin-bottom: 5rem;
 	transform: translateY(30%);
@@ -108,4 +102,55 @@
 
 .content-section.reverse .text-content {
 	direction: ltr;
+}
+/* =========================================================RESPONSIVE DESIGN================================================ */
+
+@media (max-width: 768px) {
+	.featured-business {
+		font-size: 22px;
+		margin-left: 20px;
+		margin-top: 60px;
+		text-align: center;
+	}
+
+	.content-grid {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.sentence-1,
+	.sentence-2 {
+		margin: 0 20px;
+		text-align: center;
+		transform: none;
+	}
+
+	.sen1-img,
+	.sen2-img {
+		width: 100%;
+		height: auto;
+		margin: 20px auto;
+		transform: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.featured-business {
+		font-size: 18px;
+		margin: 40px 10px 20px;
+	}
+
+	.header {
+		padding: 10px;
+	}
+
+	.logout-btn {
+		padding: 0.4rem 0.8rem;
+		font-size: 14px;
+	}
+
+	.sen1-img,
+	.sen2-img {
+		border-radius: 10px;
+	}
 }

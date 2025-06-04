@@ -39,7 +39,7 @@ function Navbar() {
 
 	function handleDashboard() {
 		setShowProfileDropdown(false);
-		navigate("/dashboard");
+		navigate("/Dashboard");
 	}
 
 	function handleSwitchToSignUp() {
@@ -97,9 +97,8 @@ function Navbar() {
 									<div className="profile-dropdown" ref={dropdownRef}>
 										<button
 											className="icon-button"
-											onClick={() =>
-												setShowProfileDropdown(!showProfileDropdown)
-											}
+											onClick={handleDashboard}
+											onMouseEnter={() => setShowProfileDropdown(true)}
 										>
 											<CgProfile size={30} />
 										</button>

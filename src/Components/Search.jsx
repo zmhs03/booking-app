@@ -3,12 +3,15 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 
 function Search({
-	placeholder,
+	placeholder = "Search...",
 	scope = "all",
 	businessId = null,
 	businesses = [],
+	variant = "inline",
+	onResultSelect = null,
 }) {
 	const [query, setQuery] = useState("");
+	const [showInput, setShowInput] = useState(true);
 	const [suggestions, setSuggestions] = useState([]);
 	const navigate = useNavigate();
 
@@ -33,31 +36,46 @@ function Search({
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-
-		if (scope === "business") return; // You can decide what to do here
+		if (scope === "business") return;
 
 		if (suggestions.length > 0 && suggestions[0].id) {
-			navigate(`/business/${suggestions[0].id}`);
+			if (onResultSelect) {
+				onResultSelect(suggestions[0].id);
+			} else {
+				navigate(`/business/${suggestions[0].id}`);
+			}
 		}
 	};
 
 	const handleSuggestionClick = (item) => {
 		if (scope === "business") return;
-		navigate(`/business/${item.id}`);
+
+		if (onResultSelect) {
+			onResultSelect(item.id);
+		} else {
+			navigate(`/business/${item.id}`);
+		}
 	};
 
 	return (
-		<div className="search-container">
-			<form onSubmit={handleSubmit}>
-				<input
-					type="text"
-					value={query}
-					onChange={(e) => setQuery(e.target.value)}
-					placeholder={placeholder}
-					className="search-input"
-				/>
+		<div
+			className={`search-container ${variant} ${
+				showInput ? "show-input" : ""
+			}`}
+		>
+			<form onSubmit={handleSubmit} className="search-form">
+				{showInput && (
+					<input
+						type="text"
+						value={query}
+						onChange={(e) => setQuery(e.target.value)}
+						placeholder={placeholder}
+						className="search-input"
+					/>
+				)}
+
 				<button type="submit" className="search-button">
-					<FiSearch size={20} />
+					<FiSearch />
 				</button>
 			</form>
 
@@ -65,7 +83,7 @@ function Search({
 				<ul className="suggestions-list">
 					{suggestions.map((item, index) => (
 						<li key={index} onClick={() => handleSuggestionClick(item)}>
-							{scope === "business" ? item.name : item.name}
+							{item.name}
 						</li>
 					))}
 				</ul>

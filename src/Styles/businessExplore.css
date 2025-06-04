@@ -42,6 +42,7 @@
 
 .business-header {
 	display: flex;
+	position: relative;
 	justify-content: space-between;
 	align-items: flex-start;
 }
@@ -80,22 +81,36 @@
 
 /*======================================================Favorite button========================================== */
 .favorite-btn {
-	background: none;
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	background: white;
 	border: none;
-	cursor: pointer;
-	padding: 8px;
 	border-radius: 50%;
-	transition: background-color 0.2s ease;
-	align-self: flex-start;
+	width: 36px;
+	height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	color: #666;
+	z-index: 2;
+	font-size: 24px;
 }
 
 .favorite-btn:hover {
-	background-color: #f3f4f6;
+	transform: scale(1.1);
+	background: #f8f9fa;
 }
 
-.heart-icon {
-	font-size: 24px;
-	color: #6b7280;
+.favorite-btn.active {
+	color: #de2e03;
+}
+
+.favorite-btn.active:hover {
+	color: #ef9a85;
+	background: #fff5f5;
 }
 
 /*====================================Business address===========================================================*/
@@ -291,13 +306,13 @@
 	background: #f7fafc;
 }
 
-/*=====================================================Responsive design==================================== */
+/* =========================================================RESPONSIVE DESIGN================================================ */
 @media (max-width: 768px) {
 	.business-card {
 		flex-direction: column;
 	}
 
-	.business-image-container {
+	.business-img-container {
 		width: 100%;
 		height: 200px;
 	}
@@ -313,12 +328,6 @@
 		align-items: flex-start;
 		gap: 4px;
 		flex: 1;
-	}
-
-	.favorite-btn {
-		align-self: flex-end;
-		margin-top: -32px;
-		margin-left: 0;
 	}
 
 	.service-booking {

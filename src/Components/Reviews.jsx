@@ -1,9 +1,13 @@
 import "../Styles/businessProfile.css";
 import { businessDetails } from "../Data/business";
 import { useState } from "react";
+import { useReviewContext } from "../Context/ReviewContext";
+import ReviewModal from "../Components/ReviewModal";
 
 function Reviews({ currentBusiness }) {
 	const [showAllReviews, setShowAllReviews] = useState(false);
+	const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+	const { addReview } = useReviewContext();
 
 	const business = currentBusiness || businessDetails[0];
 
@@ -28,7 +32,10 @@ function Reviews({ currentBusiness }) {
 				ratingBreakdown: [],
 				reviews: [],
 		  };
-
+	const handleReviewSubmit = (rating, text) => {
+		addReview(business.id, rating, text);
+		alert("Review submitted!");
+	};
 	// Helper function to calculate rating breakdown
 	function calculateRatingBreakdown(reviews) {
 		const breakdown = { 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 };
@@ -145,6 +152,14 @@ function Reviews({ currentBusiness }) {
 						))}
 					</div>
 				)}
+				<div className="right">
+					<p
+						className="leave-review-text"
+						onClick={() => setIsReviewModalOpen(true)}
+					>
+						<span className="clickable">Leave a review.</span>
+					</p>
+				</div>
 			</div>
 
 			{/* Individual Reviews */}
@@ -185,6 +200,12 @@ function Reviews({ currentBusiness }) {
 					</button>
 				</div>
 			)}
+			<ReviewModal
+				isOpen={isReviewModalOpen}
+				onClose={() => setIsReviewModalOpen(false)}
+				onSubmit={handleReviewSubmit}
+				businessName={business.name}
+			/>
 		</div>
 	);
 }

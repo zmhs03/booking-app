@@ -10,15 +10,17 @@ function Footer() {
 				<div className="footer-links">
 					<div className="support-container">
 						<h3>Support</h3>
-						<Link to="/faqs">FAQs</Link>
-						<Link to="/contact">Contact Support</Link>
-						<Link to="/appointments">Mange your Appointments</Link>
+						<Link to="/About#FAQ">FAQs</Link>
+						<Link to="/Dashboard#contact">Contact Support</Link>
+						<Link to="/Dashboard#appointments">
+							Mange your Appointments
+						</Link>
 					</div>
 
 					<div className="legal-container">
 						<h3>Legal</h3>
-						<Link to="/terms">Terms of Service</Link>
-						<Link to="/privacy">Privacy Policy</Link>
+						<Link to="/dashboard#terms">Terms of Service</Link>
+						<Link to="/dashboard#privacy">Privacy Policy</Link>
 					</div>
 
 					<div className="qlinks-container">

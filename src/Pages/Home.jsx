@@ -6,16 +6,8 @@ import heroImg from "../Assets/blake-wisz-GFrBMipOd_E-unsplash.jpg";
 import BusinessCardHome from "../Components/BusinessCardHome";
 import Windows from "../Assets/windows-SwHvzwEzCfA-unsplash.jpg";
 import Macbook from "../Assets/patrick-tomasso-fMntI8HAAB8-unsplash.jpg"; //Photo by Patrick Tomasso on Unsplash
-import Search from "../Components/Search";
-import { businessDetails } from "../Data/business";
 function Home() {
 	const { isAuthenticated } = useContext(AuthContext);
-	const [searchQuery, setSearchQuery] = useState("");
-
-	const handleSearch = (e) => {
-		e.preventDefault();
-		console.log("Searching for:", searchQuery);
-	};
 
 	const HeroSection = () => (
 		<div className="hero-container">
@@ -28,12 +20,6 @@ function Home() {
 
 			<div className="hero-content">
 				<h1 className="hero-title">All your appointments in one go.</h1>
-
-				<Search
-					scope="all"
-					placeholder="Search for a business..."
-					business={businessDetails}
-				/>
 			</div>
 		</div>
 	);

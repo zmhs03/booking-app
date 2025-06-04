@@ -191,3 +191,192 @@
 	background-color: #f0f0f0;
 	color: #000;
 }
+/* Confirmation Page Styles */
+.confirmation-content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 10px 0;
+}
+
+.confirmation-header {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.confirmation-header .modal-title {
+	color: #de2e03;
+	font-size: 22px;
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+
+.confirmation-subtitle {
+	color: #666;
+	font-size: 14px;
+	margin: 0;
+}
+
+.confirmation-details {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.detail-section {
+	background-color: #f9f9f9;
+	padding: 10px;
+	border-radius: 6px;
+	margin-bottom: 10px;
+}
+
+.detail-section h4 {
+	font-size: 16px;
+	font-weight: 600;
+	color: #333;
+	margin: 0 0 8px 0;
+}
+
+.detail-section p {
+	margin: 4px 0;
+	color: #555;
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+.confirmed-service {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 6px 0;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.confirmed-service:last-child {
+	border-bottom: none;
+}
+
+.confirmed-service .service-name {
+	font-weight: 500;
+	color: #333;
+	font-size: 14px;
+}
+
+.confirmed-service .service-price {
+	font-weight: 600;
+	color: #de2e03;
+	font-size: 14px;
+}
+
+.confirmation-total {
+	background-color: #f0f0f0;
+	border-radius: 6px;
+	padding: 15px;
+	margin-top: 10px;
+}
+
+.total-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 6px;
+}
+
+.total-row span {
+	font-size: 16px;
+	color: #333;
+}
+
+.total-row strong {
+	font-size: 18px;
+	color: #de2e03;
+	font-weight: 700;
+}
+
+.total-duration {
+	font-size: 12px;
+	color: #666;
+	text-align: right;
+	margin: 0;
+}
+
+.confirmation-actions {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.done-btn {
+	background-color: #de2e03;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	min-width: 120px;
+}
+
+.done-btn:hover {
+	background-color: #c5280a;
+}
+
+.done-btn:active {
+	background-color: #b02409;
+}
+/* =========================================================RESPONSIVE DESIGN================================================ */
+
+@media (max-width: 768px) {
+	.booking-container {
+		width: 95%;
+		padding: 15px;
+	}
+
+	.date-box {
+		padding: 8px;
+		min-width: 45px;
+		font-size: 14px;
+	}
+
+	.time-btn,
+	.time-option {
+		padding: 6px 12px;
+		font-size: 14px;
+	}
+
+	.services-summary,
+	.detail-section,
+	.confirmation-total {
+		padding: 10px;
+	}
+
+	.continue-btn,
+	.done-btn {
+		padding: 8px 16px;
+		font-size: 14px;
+	}
+
+	.dialog-yes,
+	.dialog-no {
+		padding: 0.4rem 1rem;
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 480px) {
+	.booking-container {
+		width: 100%;
+		border-radius: 0;
+		max-height: 100vh;
+	}
+
+	.date-scroll {
+		gap: 6px;
+		margin: 10px 0;
+	}
+
+	.confirmation-header .modal-title {
+		font-size: 18px;
+	}
+}

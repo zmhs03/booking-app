@@ -4,38 +4,51 @@
 	flex-wrap: wrap;
 	align-items: flex-start;
 	gap: 70px;
+	margin-top: 30px;
 }
 
 .business-box {
 	background: #fff;
-	box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
-	padding: 10px;
-	border-radius: 15px;
-	max-width: 400px;
-	width: 350px;
+	padding: 0;
+	max-width: 450px;
+	width: 400px;
+	position: relative;
+	overflow: hidden;
 }
 
 .business-images {
-	max-width: 400px;
-	height: 180px;
-	width: 350px;
+	max-width: 450px;
+	box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.15);
+	height: 200px;
+	width: 400px;
 	display: block;
-	border-radius: 15px;
+	border-radius: 8px;
 	margin-bottom: 10px;
 	object-fit: cover;
-	margin-bottom: 1px;
 }
+
+.business-content {
+	padding: 15px;
+	position: relative;
+}
+
 .business-text {
 	font-size: 18px;
-	font-style: bold;
+	font-weight: bold;
 	color: #000;
-	margin-top: 1px;
+	margin: 0 0 5px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .business-addr {
 	font-style: italic;
-	font-size: 13px;
+	font-size: 12px;
+	margin: 0;
+	color: #666;
 }
+
 .business-rating {
 	position: absolute;
 	top: 8px;
@@ -46,4 +59,67 @@
 	border-radius: 4px;
 	font-weight: bold;
 	font-size: 14px;
+}
+
+/*======================================================Favorite button========================================== */
+.favor-btn {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	color: #666;
+	font-size: 24px;
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+}
+
+.favor-btn:hover {
+	transform: scale(1.1);
+	background: #f8f9fa;
+}
+
+.favor-btn.active {
+	color: #de2e03;
+}
+
+.favor-btn.active:hover {
+	color: #ef9a85;
+	background: #fff5f5;
+}
+/* =========================================================RESPONSIVE DESIGN================================================ */
+@media (max-width: 1024px) {
+	.business-contr {
+		margin-left: 40px;
+		gap: 50px;
+	}
+	.business-box {
+		width: 100%;
+	}
+}
+
+@media (max-width: 768px) {
+	.business-contr {
+		margin-left: 20px;
+		margin-right: 20px;
+		gap: 40px;
+		justify-content: center;
+	}
+	.business-box {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	.business-contr {
+		margin-left: 10px;
+		margin-right: 10px;
+		gap: 30px;
+	}
+	.business-text {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 4px;
+	}
 }

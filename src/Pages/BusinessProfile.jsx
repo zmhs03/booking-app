@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { businessDetails } from "../Data/business";
 import { useBooking } from "../Context/BookingContext";
@@ -24,12 +24,9 @@ function BusinessProfile() {
 
 	const [searchQuery, setSearchQuery] = useState("");
 
-	// Booking modal states
 	const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 	const [selectedService, setSelectedService] = useState(null);
 	const [bookingStatus, setBookingStatus] = useState(null);
-
-	if (!business) return <p>Business not found.</p>;
 
 	const filteredServices = business.services.filter((service) =>
 		service.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -37,8 +34,14 @@ function BusinessProfile() {
 
 	const handleServiceBook = (service) => {
 		setSelectedService(service);
-		setIsBookingModalOpen(true);
 	};
+
+	useEffect(() => {
+		if (selectedService) {
+			setIsBookingModalOpen(true);
+		}
+	}, [selectedService]);
+	if (!business) return <p>Business not found.</p>;
 
 	const handleBookingConfirm = (bookingDetails) => {
 		try {
@@ -48,7 +51,7 @@ function BusinessProfile() {
 				businessName: business.name,
 				businessAddress: business.address,
 				customerName: "John Doe",
-				customerEmail: "john@example.com",
+				customerEmail: "admin@example.com",
 				customerPhone: "+27123456789",
 			};
 
@@ -122,12 +125,12 @@ function BusinessProfile() {
 									/>
 								</div>
 							</div>
-
-							<ServiceCard
-								services={filteredServices}
-								onBook={handleServiceBook}
-							/>
 						</div>
+
+						<ServiceCard
+							services={filteredServices}
+							onBook={handleServiceBook}
+						/>
 					</div>
 
 					<Reviews reviews={business.reviews} />
@@ -136,8 +139,10 @@ function BusinessProfile() {
 
 			<BookingModal
 				isOpen={isBookingModalOpen}
-				onClose={closeBookingModal}
-				onBook={handleBookingConfirm}
+				onClose={() => {
+					setIsBookingModalOpen(false);
+					setSelectedService(null);
+				}}
 				selectedService={selectedService}
 				business={business}
 			/>
