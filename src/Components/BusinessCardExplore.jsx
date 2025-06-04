@@ -4,6 +4,7 @@ import "../Styles/businessExplore.css";
 import { ImStarFull } from "react-icons/im";
 import { SlHeart } from "react-icons/sl";
 import { businessDetails } from "../Data/business";
+import BookingModal from "../Components/BookingModal";
 
 const ITEMS_PER_PAGE = 6;
 
@@ -43,7 +44,15 @@ function BusinessCardExplore() {
 	const [currentPage, setCurrentPage] = useState(1);
 	const [selectedCategory, setSelectedCategory] = useState("All");
 	const [sortBy, setSortBy] = useState("Default");
+	const [isModalOpen, setModalOpen] = useState(false);
+	const [selectedBusiness, setSelectedBusiness] = useState(null);
+	const [selectedService, setSelectedService] = useState(null);
 
+	const handleBook = (business, service) => {
+		setSelectedBusiness(business);
+		setSelectedService(service);
+		setModalOpen(true);
+	};
 	useEffect(() => {
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	}, [currentPage]);
@@ -175,7 +184,15 @@ function BusinessCardExplore() {
 											<span className="service-price">
 												R {firstService?.price}
 											</span>
-											<button className="book-btn">Book</button>
+											<button
+												className="book-btn"
+												onClick={(e) => {
+													e.preventDefault();
+													handleBook(business, firstService);
+												}}
+											>
+												Book
+											</button>
 										</div>
 									</div>
 								</div>
@@ -230,6 +247,13 @@ function BusinessCardExplore() {
 					</svg>
 				</button>
 			</div>
+			{isModalOpen && (
+				<BookingModal
+					business={selectedBusiness}
+					service={selectedService}
+					onClose={() => setModalOpen(false)}
+				/>
+			)}
 		</div>
 	);
 }

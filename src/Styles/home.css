@@ -20,20 +20,11 @@
 }
 
 .featured-business {
-	font-size: 18px;
+	font-size: 28px;
 	font-weight: bold;
 	color: #000;
 	margin-left: 80px;
-	margin-top: 1px;
-}
-
-.logged-in-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 2rem;
-	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-	color: white;
+	margin-top: 70px;
 }
 
 .header-actions {
@@ -64,6 +55,7 @@
 
 .content-section {
 	margin-bottom: 5rem;
+	transform: translateY(30%);
 }
 
 .content-grid {
@@ -85,13 +77,14 @@
 	line-height: 1.6;
 	justify-content: center;
 	margin-right: 80px;
+	transform: translateX(-10%);
 }
 
 .sen1-img {
 	height: 250px;
 	width: 450px;
 	display: block;
-	border-radius: 8px;
+	border-radius: 15px;
 	margin-bottom: 10px;
 	object-fit: cover;
 	margin-top: 80px;
@@ -102,11 +95,11 @@
 	height: 250px;
 	width: 450px;
 	display: block;
-	border-radius: 8px;
-	margin-bottom: 10px;
+	border-radius: 15px;
 	object-fit: cover;
 	margin-top: 80px;
-	transform: translateX(30%);
+	margin-bottom: 80px;
+	transform: translateX(25%);
 }
 
 .content-section.reverse .content-grid {

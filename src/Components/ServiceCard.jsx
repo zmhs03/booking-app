@@ -1,20 +1,8 @@
 import "../Styles/businessProfile.css";
 
-function ServiceCard({ services }) {
+function ServiceCard({ services, onBook }) {
 	return (
 		<section className="services-section">
-			<div className="services-header">
-				<h3>Services</h3>
-				{/* <div className="search-container">
-					<input
-						type="text"
-						placeholder="Search for service"
-						className="search-input"
-					/>
-					<div className="search-icon">🔍</div>
-				</div> */}
-			</div>
-
 			{Array.isArray(services) &&
 				services.map((service, idx) => (
 					<div key={idx} className="service-card">
@@ -27,7 +15,9 @@ function ServiceCard({ services }) {
 						</div>
 						<div className="price-booking">
 							<p className="price">R {service.price}</p>
-							<button className="book-btn">Book</button>
+							<button className="book-btn" onClick={() => onBook(service)}>
+								Book
+							</button>
 						</div>
 					</div>
 				))}

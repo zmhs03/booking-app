@@ -40,20 +40,20 @@ function About() {
 							<p className="offer-description">
 								<ul>
 									<li>
-										Curated Businesses: Find top-rated service providers
-										near you.
+										<strong>Curated Businesses:</strong> Find top-rated
+										service providers near you.
 									</li>
 									<li>
-										Booking made easy: Make appointments without having to
-										wait or make a call.
+										<strong>Booking made easy:</strong> Make appointments
+										without having to wait or make a call.
 									</li>
 									<li>
-										Favourite: Save businesses you love for quick acess
-										later.
+										<strong>Favourite:</strong> Save businesses you love
+										for quick acess later.
 									</li>
 									<li>
-										Business Profiles: Find out more about the services,
-										costs, and availability of each supplier.
+										<strong>Business Profiles:</strong> Find out more about
+										the services, costs, and availability of each supplier.
 									</li>
 								</ul>
 							</p>
@@ -68,23 +68,24 @@ function About() {
 							<p className="values-description">
 								<ul>
 									<li>
-										Trust: We prioritise transparency and integrity in our
-										listings and reviews.
+										<strong>Trust:</strong> We prioritise transparency and
+										integrity in our listings and reviews.
 									</li>
 									<li>
-										Community: Helping local service providers develop.
+										<strong>Community:</strong> Helping local service
+										providers develop.
 									</li>
 									<li>
-										Convenience: Making routine reservations quickly and
-										without difficulty.
+										<strong>Convenience:</strong> Making routine
+										reservations quickly and without difficulty.
 									</li>
 									<li>
-										Quality: Highlighting top-performing businesses based
-										on genuine feedback.
+										<strong>Quality:</strong> Highlighting top-performing
+										businesses based on genuine feedback.
 									</li>
 									<li>
-										Innovation: We are always upgrading our platform
-										depending on user needs.
+										<strong>Innovation:</strong> We are always upgrading
+										our platform depending on user needs.
 									</li>
 								</ul>
 							</p>

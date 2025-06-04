@@ -1,13 +1,13 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Context/AuthContext";
-import { LuSearch } from "react-icons/lu";
 import "../Styles/home.css";
 import "../Styles/hero.css";
 import heroImg from "../Assets/blake-wisz-GFrBMipOd_E-unsplash.jpg";
 import BusinessCardHome from "../Components/BusinessCardHome";
 import Windows from "../Assets/windows-SwHvzwEzCfA-unsplash.jpg";
 import Macbook from "../Assets/patrick-tomasso-fMntI8HAAB8-unsplash.jpg"; //Photo by Patrick Tomasso on Unsplash
-
+import Search from "../Components/Search";
+import { businessDetails } from "../Data/business";
 function Home() {
 	const { isAuthenticated } = useContext(AuthContext);
 	const [searchQuery, setSearchQuery] = useState("");
@@ -21,9 +21,7 @@ function Home() {
 		<div className="hero-container">
 			<div
 				className="hero-background"
-				style={{
-					backgroundImage: `url(${heroImg})`,
-				}}
+				style={{ backgroundImage: `url(${heroImg})` }}
 			/>
 
 			<div className="hero-overlay" />
@@ -31,21 +29,11 @@ function Home() {
 			<div className="hero-content">
 				<h1 className="hero-title">All your appointments in one go.</h1>
 
-				<div className="search-container">
-					<div className="search-input-wrapper">
-						<input
-							type="text"
-							placeholder="Search for services"
-							value={searchQuery}
-							onChange={(e) => setSearchQuery(e.target.value)}
-							onKeyDown={(e) => e.key === "Enter" && handleSearch(e)}
-							className="search-input"
-						/>
-						<button onClick={handleSearch} className="search-button">
-							<LuSearch size={24} />
-						</button>
-					</div>
-				</div>
+				<Search
+					scope="all"
+					placeholder="Search for a business..."
+					business={businessDetails}
+				/>
 			</div>
 		</div>
 	);

@@ -1,4 +1,3 @@
-import "../Styles/explore.css";
 import BusinessCardExplore from "../Components/BusinessCardExplore";
 
 function Explore() {

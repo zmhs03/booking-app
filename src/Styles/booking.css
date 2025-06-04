@@ -1,0 +1,193 @@
+.booking-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+.booking-container {
+	background-color: #fff;
+	border-radius: 10px;
+	width: 90%;
+	max-width: 500px;
+	padding: 20px;
+	position: relative;
+	max-height: 90vh;
+	overflow-y: auto;
+}
+.date-scroll {
+	display: flex;
+	gap: 10px;
+	margin: 15px 0;
+	overflow-x: auto;
+	white-space: nowrap;
+	cursor: grab;
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+}
+.date-scroll::-webkit-scrollbar {
+	display: none; /* Chrome, Safari */
+}
+.date-scroll.dragging {
+	cursor: grabbing;
+}
+
+.date-box {
+	background-color: #f2f2f2;
+	padding: 10px;
+	border-radius: 8px;
+	cursor: pointer;
+	text-align: center;
+	min-width: 50px;
+}
+
+.date-box.selected {
+	background-color: #de2e03;
+	color: #fff;
+}
+
+.time-slot {
+	display: flex;
+	justify-content: center;
+	margin: 10px 0;
+}
+
+.time-btn {
+	background-color: #e0e0e0;
+	border: none;
+	padding: 8px 16px;
+	margin: 0 5px;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.time-btn.selected {
+	background-color: #de2e03;
+	color: #fff;
+}
+
+.time-options {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	margin-bottom: 15px;
+}
+
+.time-option {
+	background-color: #fff;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.time-option:hover {
+	background-color: #ef9a85;
+}
+
+.time-option.selected {
+	background-color: #de2e03;
+	color: #fff;
+}
+
+.services-summary {
+	background-color: #f9f9f9;
+	padding: 10px;
+	border-radius: 6px;
+	margin-bottom: 15px;
+}
+
+.booked-service {
+	margin-bottom: 10px;
+}
+
+.booked-service-info h4 {
+	margin: 0;
+}
+
+.add-service {
+	color: #de2e03;
+	cursor: pointer;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.service-list-popup {
+	background-color: #f0f0f0;
+	padding: 10px;
+	border-radius: 6px;
+}
+
+.service-option {
+	display: flex;
+	justify-content: space-between;
+	padding: 6px 0;
+	cursor: pointer;
+}
+
+.booking-total {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.continue-btn {
+	background-color: #de2e03;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.cancel-dialog-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+.cancel-dialog {
+	background: #fff;
+	padding: 2rem;
+	border-radius: 12px;
+	text-align: center;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.dialog-buttons {
+	margin-top: 1rem;
+	display: flex;
+	justify-content: space-around;
+}
+
+.dialog-yes,
+.dialog-no {
+	padding: 0.5rem 1.5rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.dialog-yes {
+	background-color: #de2e03;
+	color: #fff;
+}
+
+.dialog-no {
+	background-color: #f0f0f0;
+	color: #000;
+}

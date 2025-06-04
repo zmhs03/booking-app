@@ -1,8 +1,7 @@
 import React, { useContext, useState, useRef, useEffect } from "react";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import { AuthContext } from "../Context/AuthContext";
-import { useNavigate } from "react-router";
-import { FiSearch, FiUser } from "react-icons/fi";
+import { CgProfile } from "react-icons/cg";
 import Logo from "../Assets/Logo.png";
 import Login from "./Login";
 import SignUp from "./SignUp";
@@ -11,7 +10,6 @@ import "../index.css";
 function Navbar() {
 	const { logout, isAuthenticated } = useContext(AuthContext);
 	const navigate = useNavigate();
-
 	const [showLogin, setShowLogin] = useState(false);
 	const [showSignUp, setShowSignUp] = useState(false);
 	const [showProfileDropdown, setShowProfileDropdown] = useState(false);
@@ -64,7 +62,7 @@ function Navbar() {
 			<nav className="navbar">
 				<div className="navbar-container">
 					<div className="navbar-content">
-						<Link to="#" className="logo-link">
+						<Link to="/" className="logo-link">
 							<img src={Logo} alt="Logo" className="logo-image" />
 						</Link>
 
@@ -96,10 +94,6 @@ function Navbar() {
 										Explore
 									</NavLink>
 
-									<button className="icon-button">
-										<FiSearch size={20} />
-									</button>
-
 									<div className="profile-dropdown" ref={dropdownRef}>
 										<button
 											className="icon-button"
@@ -107,7 +101,7 @@ function Navbar() {
 												setShowProfileDropdown(!showProfileDropdown)
 											}
 										>
-											<FiUser size={20} />
+											<CgProfile size={30} />
 										</button>
 
 										{showProfileDropdown && (

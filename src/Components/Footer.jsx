@@ -24,9 +24,9 @@ function Footer() {
 					<div className="qlinks-container">
 						<h3>Quick Links</h3>
 						<Link to="/">Home</Link>
-						<Link to="/about">About Us</Link>
-						<Link to="/explore">Explore</Link>
-						<Link to="/dashboard">Dashboard</Link>
+						<Link to="/About">About Us</Link>
+						<Link to="/Explore">Explore</Link>
+						<Link to="/Dashboard">Dashboard</Link>
 					</div>
 				</div>
 

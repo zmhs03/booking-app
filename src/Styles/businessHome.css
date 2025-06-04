@@ -1,15 +1,16 @@
 .business-contr {
 	display: flex;
+	margin-left: 80px;
 	flex-wrap: wrap;
-	gap: 20px;
-	justify-content: center;
+	align-items: flex-start;
+	gap: 70px;
 }
 
 .business-box {
 	background: #fff;
 	box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
 	padding: 10px;
-	border-radius: 8px;
+	border-radius: 15px;
 	max-width: 400px;
 	width: 350px;
 }
@@ -19,7 +20,7 @@
 	height: 180px;
 	width: 350px;
 	display: block;
-	border-radius: 8px;
+	border-radius: 15px;
 	margin-bottom: 10px;
 	object-fit: cover;
 	margin-bottom: 1px;

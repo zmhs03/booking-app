@@ -47,22 +47,22 @@ export const businessDetails = [
 			{
 				name: "Signature Facial Treatment",
 				duration: "60 min",
-				price: "450",
+				price: 450,
 			},
 			{
 				name: "Deep Conditioning Hair Treatment",
 				duration: "45 min",
-				price: "300",
+				price: 300,
 			},
 			{
 				name: "Eyebrow Threading",
 				duration: "30 min",
-				price: "200",
+				price: 200,
 			},
 			{
 				name: "Graduation Makeup",
 				duration: "75 min",
-				price: "550",
+				price: 550,
 			},
 		],
 		businessHours: [
@@ -78,56 +78,56 @@ export const businessDetails = [
 		rating: "4.5",
 		reviews: [
 			{
-				image: "profile",
+				image: profile,
 				name: "Thandi Mthembu",
 				reviewRating: 5,
 				review:
 					"Absolutely love this salon! Angelina is incredibly talented and always makes me feel pampered. The atmosphere is relaxing and the results are consistently amazing.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Emma Thompson",
 				reviewRating: 4,
 				review:
 					"Great service and professional staff. My hair color came out beautifully, though the wait time was a bit longer than expected.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Nomsa Dlamini",
 				reviewRating: 5,
 				review:
 					"Best salon experience I've had in years! The attention to detail is outstanding and the prices are very reasonable for the quality of service.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Priya Patel",
 				reviewRating: 4,
 				review:
 					"Very clean facility and skilled stylists. Happy with my cut and style, will definitely return for future appointments.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Jennifer Walsh",
 				reviewRating: 5,
 				review:
 					"Exceptional service from start to finish. The team is friendly, professional, and truly cares about their clients' satisfaction.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Amanda Foster",
 				reviewRating: 4,
 				review:
 					"Good experience overall. The stylist listened to what I wanted and delivered great results. Slightly pricey but worth it.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Lindiwe Nkomo",
 				reviewRating: 5,
 				review:
 					"Amazing transformation! I came in with damaged hair and left feeling like a new person. Highly recommend this salon to everyone.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Candice van der Merwe",
 				reviewRating: 4,
 				review:
@@ -146,7 +146,7 @@ export const businessDetails = [
 			"Borcelle Pet Care Studio is a boutique grooming and wellness centre for cats and dogs. The studio offers premium grooming, pet massages, and wellness checkups in a clean, pet-friendly environment. Their compassionate team ensures every furry friend receives individual attention and care.",
 		staff: [
 			{
-				name: "ongi Zulu",
+				name: "Bongi Zulu",
 				image: profile,
 			},
 			{
@@ -167,22 +167,22 @@ export const businessDetails = [
 			{
 				name: "Pet Grooming Full Package",
 				duration: "90 min",
-				price: "450",
+				price: 450,
 			},
 			{
 				name: "Nail Trimming",
 				duration: "20 min",
-				price: "150",
+				price: 150,
 			},
 			{
 				name: "Pet Massage",
 				duration: "45 min",
-				price: "250",
+				price: 250,
 			},
 			{
 				name: "Fur Trim & Brush",
 				duration: "30 min",
-				price: "350",
+				price: 350,
 			},
 		],
 		businessHours: [
@@ -198,56 +198,56 @@ export const businessDetails = [
 		rating: "4.1",
 		reviews: [
 			{
-				image: "profile",
+				image: profile,
 				name: "Sipho Mabena",
 				reviewRating: 4,
 				review:
 					"Great grooming service for my Golden Retriever. The staff is gentle and experienced, though booking can be challenging during busy periods.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Karen Davis",
 				reviewRating: 5,
 				review:
 					"Fantastic pet care! My cat always comes home looking and smelling wonderful. The team clearly loves animals and it shows in their work.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Johan van Wyk",
 				reviewRating: 4,
 				review:
 					"Professional service and reasonable prices. My dog seems comfortable here, which is the most important thing to me.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Zinhle Sithole",
 				reviewRating: 4,
 				review:
 					"Very satisfied with the grooming quality. The facility is clean and the staff communicates well about my pet's needs.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Robert Taylor",
 				reviewRating: 3,
 				review:
 					"Decent service but had to wait longer than scheduled. The grooming quality was good once we were seen.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Naledi Molefe",
 				reviewRating: 4,
 				review:
 					"Good experience overall. My poodle's cut looks great and the staff was patient with her anxious behavior.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "James Lee",
 				reviewRating: 5,
 				review:
 					"Excellent pet care studio! They go above and beyond to ensure pets are comfortable and well-groomed. Highly recommend!",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Thandiwe Khumalo",
 				reviewRating: 4,
 				review:
@@ -282,7 +282,7 @@ export const businessDetails = [
 			{
 				name: "Oral Exam",
 				duration: "60 min",
-				price: "700",
+				price: 700,
 			},
 			{
 				name: "Teeth Whitening Treatment",
@@ -292,12 +292,12 @@ export const businessDetails = [
 			{
 				name: "Dental Cleaning & Polish",
 				duration: "50 min",
-				price: "800",
+				price: 800,
 			},
 			{
 				name: "Digital X-ray & Diagnosis",
 				duration: "30 min",
-				price: "400",
+				price: 400,
 			},
 		],
 		businessHours: [
@@ -313,56 +313,56 @@ export const businessDetails = [
 		rating: "4.2",
 		reviews: [
 			{
-				image: "profile",
+				image: profile,
 				name: "Kabelo Maseko",
 				reviewRating: 4,
 				review:
 					"Dr. Zhang is knowledgeable and thorough. The office is modern and clean, though appointments can be hard to schedule on short notice.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Catherine Moore",
 				reviewRating: 5,
 				review:
 					"Excellent dental care! Dr. Zhang explains everything clearly and makes sure I'm comfortable throughout procedures. Top-notch service.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Pieter Botha",
 				reviewRating: 4,
 				review:
 					"Professional and efficient service. The cleaning was thorough and the staff is friendly. Satisfied with my experience.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Nomfundo Ndaba",
 				reviewRating: 4,
 				review:
 					"Good dental practice with attentive care. Dr. Zhang is gentle and skilled, making dental visits much less stressful.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "George Clark",
 				reviewRating: 3,
 				review:
 					"Decent service but felt a bit rushed during my appointment. The dental work was competent though the experience could be improved.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Lerato Mahlangu",
 				reviewRating: 4,
 				review:
 					"Reliable dentist with good technical skills. The office runs smoothly and I appreciate the personalized attention.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Anthony Walker",
 				reviewRating: 5,
 				review:
 					"Outstanding dental care! Dr. Zhang is meticulous and caring. I've never felt more confident about my dental health.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Sizani Ndlovu",
 				reviewRating: 4,
 				review:
@@ -397,22 +397,22 @@ export const businessDetails = [
 			{
 				name: "General Check-up & Consultation",
 				duration: "30 min",
-				price: "500",
+				price: 500,
 			},
 			{
 				name: "Filling (Composite)",
 				duration: "45 min",
-				price: "1000",
+				price: 1000,
 			},
 			{
 				name: "Root Canal Therapy",
 				duration: "90 min",
-				price: "2800",
+				price: 2800,
 			},
 			{
 				name: "Emergency Dental Care",
 				duration: "60 min",
-				price: "1200",
+				price: 1200,
 			},
 		],
 		businessHours: [
@@ -428,56 +428,56 @@ export const businessDetails = [
 		rating: "4.6",
 		reviews: [
 			{
-				image: "profile",
+				image: profile,
 				name: "Mandla Zungu",
 				reviewRating: 5,
 				review:
 					"Dr. Tran is absolutely fantastic! Professional, gentle, and thorough. The best dental experience I've ever had.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Susan Allen",
 				reviewRating: 4,
 				review:
 					"Excellent dental care with a warm, welcoming atmosphere. Dr. Tran takes time to explain procedures and ensure comfort.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Riaan de Klerk",
 				reviewRating: 5,
 				review:
 					"Outstanding service from start to finish. The clinic is state-of-the-art and Dr. Tran's expertise is evident in every procedure.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Bontle Mogale",
 				reviewRating: 4,
 				review:
 					"Very satisfied with my dental treatment. Professional staff and Dr. Tran's gentle approach made the experience pleasant.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Mark Scott",
 				reviewRating: 5,
 				review:
 					"Incredible dental care! Dr. Tran is skilled, compassionate, and truly cares about patient comfort. Highly recommend!",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Fatima Singh",
 				reviewRating: 4,
 				review:
 					"Great dental practice with modern facilities. Dr. Tran is thorough and professional, making dental visits stress-free.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Paul Adams",
 				reviewRating: 5,
 				review:
 					"Exceptional dentist! Dr. Tran's attention to detail and patient care is unmatched. This clinic sets the standard for dental excellence.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Nosipho Cele",
 				reviewRating: 5,
 				review:
@@ -514,22 +514,22 @@ export const businessDetails = [
 			{
 				name: "Swedish Full Body Massage",
 				duration: "60 min",
-				price: "600",
+				price: 600,
 			},
 			{
 				name: "Rejuvenating Facial",
 				duration: "50 min",
-				price: "450",
+				price: 450,
 			},
 			{
 				name: "Hot Stone Therapy",
 				duration: "75 min",
-				price: "700",
+				price: 700,
 			},
 			{
 				name: "Detox Body Wrap",
 				duration: "60 min",
-				price: "550",
+				price: 550,
 			},
 		],
 		businessHours: [
@@ -545,56 +545,56 @@ export const businessDetails = [
 		rating: "4.0",
 		reviews: [
 			{
-				image: "profile",
+				image: profile,
 				name: "Keabetswe Mokoena",
 				reviewRating: 4,
 				review:
 					"Nice spa experience with relaxing atmosphere. The massage was good though I've had better elsewhere. Still a pleasant visit overall.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Ashley Evans",
 				reviewRating: 4,
 				review:
 					"Good service and clean facilities. The facial was refreshing and the staff was professional. Reasonable prices for the area.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Stephanie Turner",
 				reviewRating: 3,
 				review:
 					"Average spa experience. The services were adequate but nothing exceptional. The ambiance could use some improvement.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Palesa Mthimunye",
 				reviewRating: 4,
 				review:
 					"Enjoyed my visit to Isabella Beauty & Spa. The treatments were relaxing and the staff was attentive to my needs.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Amy Parker",
 				reviewRating: 5,
 				review:
 					"Wonderful spa day! The treatments were luxurious and I left feeling completely rejuvenated. Definitely worth the visit.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Natasha van Niekerk",
 				reviewRating: 4,
 				review:
 					"Pleasant spa experience with knowledgeable staff. The services were professional and I felt relaxed throughout my visit.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Kimberly Collins",
 				reviewRating: 3,
 				review:
 					"Decent spa but felt overpriced for what was offered. The service was fine but didn't exceed expectations.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Mpho Mbeki",
 				reviewRating: 5,
 				review:
@@ -636,22 +636,22 @@ export const businessDetails = [
 			{
 				name: "Acrylic Nail Extensions",
 				duration: "90 min",
-				price: "500",
+				price: 500,
 			},
 			{
 				name: "Gel Overlay with Art",
 				duration: "75 min",
-				price: "420",
+				price: 420,
 			},
 			{
 				name: "Classic Manicure & Pedicure",
 				duration: "60 min",
-				price: "350",
+				price: 350,
 			},
 			{
 				name: "Nail Repair & Touch-Up",
 				duration: "30 min",
-				price: "180",
+				price: 180,
 			},
 		],
 		businessHours: [
@@ -667,56 +667,56 @@ export const businessDetails = [
 		rating: "4.2",
 		reviews: [
 			{
-				image: "profile",
+				image: profile,
 				name: "Samantha Morris",
 				reviewRating: 4,
 				review:
 					"Creative nail art designs and skilled technicians. The work is detailed though sometimes the wait times can be long.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Tebogo Matlala",
 				reviewRating: 3,
 				review:
 					"Decent nail salon with good artistic skills. The designs are nice but the service could be more efficient.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Vanessa Reed",
 				reviewRating: 4,
 				review:
 					"Happy with my nail art! Juliana is talented and creates beautiful designs. The studio is clean and well-organized.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Noluthando Zulu",
 				reviewRating: 4,
 				review:
 					"Great nail art studio with creative designs. The staff is friendly and skilled, though pricing is on the higher side.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Tiffany Bailey",
 				reviewRating: 3,
 				review:
 					"Good nail art but had some issues with durability. The designs are beautiful but chipped sooner than expected.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Anele Mnguni",
 				reviewRating: 4,
 				review:
 					"Impressive nail art skills and attention to detail. Juliana really knows her craft and creates stunning designs.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Kayla Richardson",
 				reviewRating: 4,
 				review:
 					"Satisfied with my nail art experience. The studio has a good atmosphere and the technicians are professional.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Rethabile Tshabalala",
 				reviewRating: 4,
 				review:
@@ -751,22 +751,22 @@ export const businessDetails = [
 			{
 				name: "Initial Orthodontic Consultation",
 				duration: "45 min",
-				price: "850",
+				price: 850,
 			},
 			{
 				name: "Braces Installation (Upper or Lower)",
 				duration: "90 min",
-				price: "3500",
+				price: 3500,
 			},
 			{
 				name: "Monthly Braces Adjustment",
 				duration: "30 min",
-				price: "600",
+				price: 600,
 			},
 			{
 				name: "Retainer Fitting",
 				duration: "45 min",
-				price: "1200",
+				price: 1200,
 			},
 		],
 		businessHours: [
@@ -782,56 +782,56 @@ export const businessDetails = [
 		rating: "3.8",
 		reviews: [
 			{
-				image: "profile",
+				image: profile,
 				name: "Lwazi Ngubane",
 				reviewRating: 4,
 				review:
 					"Dr. Silva is knowledgeable and professional. The treatment plan is clear and progress is visible, though appointments can be rushed.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Tyler Howard",
 				reviewRating: 3,
 				review:
 					"Decent orthodontic care but communication could be better. The results are good though the process felt impersonal at times.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Jaco Steyn",
 				reviewRating: 4,
 				review:
 					"Happy with my orthodontic treatment. Dr. Silva is skilled and the office staff is helpful with scheduling and questions.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Sindi Mbatha",
 				reviewRating: 4,
 				review:
 					"Good orthodontic practice with modern equipment. Dr. Silva explains the treatment well and the results are satisfactory.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Cameron Peterson",
 				reviewRating: 3,
 				review:
 					"Average orthodontic experience. The treatment is progressing but I expected more personalized attention for the price.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Katlego Mokone",
 				reviewRating: 4,
 				review:
 					"Pleased with my braces treatment. Dr. Silva is professional and the office runs efficiently, making appointments convenient.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Morgan Ramirez",
 				reviewRating: 4,
 				review:
 					"Solid orthodontic care with good results. The staff is competent and Dr. Silva monitors progress carefully.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Tumelo Mafokeng",
 				reviewRating: 4,
 				review:
@@ -865,22 +865,22 @@ export const businessDetails = [
 			{
 				name: "Beginner Japanese Lesson",
 				duration: "60 min",
-				price: "400",
+				price: 400,
 			},
 			{
 				name: "Intermediate Grammar Workshop",
 				duration: "90 min",
-				price: "600",
+				price: 600,
 			},
 			{
 				name: "Conversational Japanese Practice",
 				duration: "45 min",
-				price: "350",
+				price: 350,
 			},
 			{
 				name: "JLPT Prep Session (N5–N3)",
 				duration: "60 min",
-				price: "500",
+				price: 500,
 			},
 		],
 		businessHours: [
@@ -896,56 +896,56 @@ export const businessDetails = [
 		rating: "3.8",
 		reviews: [
 			{
-				image: "profile",
+				image: profile,
 				name: "Bongani Motaung",
 				reviewRating: 4,
 				review:
 					"Olivia is a patient and knowledgeable Japanese teacher. Her methods are effective though I wish there were more conversational practice opportunities.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Kevin Rivera",
 				reviewRating: 3,
 				review:
 					"Good Japanese instruction but the pace can be challenging. Olivia knows the language well but could improve her teaching techniques.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Deon Pretorius",
 				reviewRating: 4,
 				review:
 					"Enjoying my Japanese lessons with Olivia. She's encouraging and provides clear explanations of grammar and vocabulary.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Khanyisile Mthombeni",
 				reviewRating: 4,
 				review:
 					"Solid Japanese language instruction. Olivia is professional and well-prepared for each lesson. Making steady progress.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Aaron Kelly",
 				reviewRating: 3,
 				review:
 					"Decent language lessons but could use more interactive elements. Olivia is knowledgeable but the sessions can feel repetitive.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Sean Sanders",
 				reviewRating: 4,
 				review:
 					"Happy with my Japanese learning experience. Olivia is patient and adapts to my learning style well.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Ian Price",
 				reviewRating: 4,
 				review:
 					"Good Japanese teacher with strong language skills. Olivia provides helpful feedback and encourages consistent practice.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Tshepo Lekganyane",
 				reviewRating: 4,
 				review:
@@ -983,22 +983,22 @@ export const businessDetails = [
 			{
 				name: "Posture & Mobility Assessment",
 				duration: "60 min",
-				price: "700",
+				price: 700,
 			},
 			{
 				name: "Corrective Exercise Session",
 				duration: "45 min",
-				price: "550",
+				price: 550,
 			},
 			{
 				name: "Injury Recovery Program",
 				duration: "60 min",
-				price: "800",
+				price: 800,
 			},
 			{
 				name: "Personalized Kinesiology Plan",
 				duration: "75 min",
-				price: "950",
+				price: 950,
 			},
 		],
 		businessHours: [
@@ -1014,56 +1014,56 @@ export const businessDetails = [
 		rating: "4.3",
 		reviews: [
 			{
-				image: "profile",
+				image: profile,
 				name: "Ndivhuwo Makhado",
 				reviewRating: 5,
 				review:
 					"Olivia is an exceptional kinesiologist! Her assessment was thorough and the treatment plan has significantly improved my mobility and pain levels.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Trevor Barnes",
 				reviewRating: 5,
 				review:
 					"Outstanding kinesiology services! Olivia's expertise and personalized approach helped me recover from my injury faster than expected.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Blake Ross",
 				reviewRating: 5,
 				review:
 					"Incredible results with Olivia's kinesiology treatments. She's knowledgeable, professional, and truly cares about her clients' wellbeing.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Kagiso Moloi",
 				reviewRating: 4,
 				review:
 					"Very satisfied with Olivia's kinesiology services. Her treatments are effective and she provides excellent education about movement and health.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Garrett Coleman",
 				reviewRating: 5,
 				review:
 					"Olivia is amazing! Her kinesiology expertise has transformed my quality of life. Professional, caring, and highly skilled.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Mokgadi Phala",
 				reviewRating: 5,
 				review:
 					"Exceptional kinesiologist! Olivia's holistic approach and attention to detail make her stand out. Highly recommend her services.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Dustin Perry",
 				reviewRating: 5,
 				review:
 					"Best kinesiology experience I've had! Olivia is thorough, knowledgeable, and her treatments have made a tremendous difference.",
 			},
 			{
-				image: "profile",
+				image: profile,
 				name: "Lesego Maboe",
 				reviewRating: 4,
 				review:
@@ -1097,22 +1097,22 @@ export const businessDetails = [
 			{
 				name: "Luxury Hydrotherapy Session",
 				duration: "90 min",
-				price: "950",
+				price: 950,
 			},
 			{
 				name: "Aromatherapy Massage",
 				duration: "60 min",
-				price: "650",
+				price: 650,
 			},
 			{
 				name: "Couples Spa Experience",
 				duration: "120 min",
-				price: "1800",
+				price: 1800,
 			},
 			{
 				name: "Full-Day Spa Package",
 				duration: "6 hours",
-				price: "3000",
+				price: 3000,
 			},
 		],
 		businessHours: [
@@ -1212,22 +1212,22 @@ export const businessDetails = [
 			{
 				name: "Routine Pet Health Check-up",
 				duration: "30 min",
-				price: "350",
+				price: 350,
 			},
 			{
 				name: "Vaccination Package",
 				duration: "45 min",
-				price: "500",
+				price: 500,
 			},
 			{
 				name: "Microchipping & Registration",
 				duration: "30 min",
-				price: "400",
+				price: 400,
 			},
 			{
 				name: "Emergency Vet Visit",
 				duration: "60 min",
-				price: "800",
+				price: 800,
 			},
 		],
 		businessHours: [
@@ -1326,22 +1326,22 @@ export const businessDetails = [
 			{
 				name: "Ladies Wash, Cut & Style",
 				duration: "60 min",
-				price: "450",
+				price: 450,
 			},
 			{
 				name: "Gents Haircut & Beard Trim",
 				duration: "45 min",
-				price: "300",
+				price: 300,
 			},
 			{
 				name: "Full Hair Colour Treatment",
 				duration: "90 min",
-				price: "700",
+				price: 700,
 			},
 			{
 				name: "Blow-Dry & Heat Styling",
 				duration: "45 min",
-				price: "250",
+				price: 250,
 			},
 		],
 		businessHours: [
@@ -1431,7 +1431,7 @@ export const businessDetails = [
 				image: profile,
 			},
 			{
-				name: "Peter Blooom",
+				name: "Peter Bloom",
 				image: profile,
 			},
 			{
@@ -1443,22 +1443,22 @@ export const businessDetails = [
 			{
 				name: "Classic Shave with Hot Towel",
 				duration: "30 min",
-				price: "180",
+				price: 180,
 			},
 			{
 				name: "Fade Cut & Style",
 				duration: "45 min",
-				price: "250",
+				price: 250,
 			},
 			{
 				name: "Beard Sculpting & Oil Treatment",
 				duration: "30 min",
-				price: "220",
+				price: 220,
 			},
 			{
 				name: "Student Special: Cut & Shave",
 				duration: "45 min",
-				price: "200",
+				price: 200,
 			},
 		],
 		businessHours: [
@@ -1558,22 +1558,22 @@ export const businessDetails = [
 			{
 				name: "VIP Escort & Bodyguarding",
 				duration: "per hour",
-				price: "850",
+				price: 850,
 			},
 			{
 				name: "Event Security Deployment",
 				duration: "4 hours",
-				price: "3000",
+				price: 3000,
 			},
 			{
 				name: "Property Patrol & Monitoring",
 				duration: "12 hours",
-				price: "4500",
+				price: 4500,
 			},
 			{
 				name: "Armed Response Subscription",
 				duration: "per month",
-				price: "1800",
+				price: 1800,
 			},
 		],
 		businessHours: [
@@ -1672,22 +1672,22 @@ export const businessDetails = [
 			{
 				name: "Dog Full Groom",
 				duration: "90 min",
-				price: "500",
+				price: 500,
 			},
 			{
 				name: "Cat Wash & Trim",
 				duration: "60 min",
-				price: "400",
+				price: 400,
 			},
 			{
 				name: "Teeth Cleaning for Pets",
 				duration: "30 min",
-				price: "200",
+				price: 200,
 			},
 			{
 				name: "De-shedding Treatment",
 				duration: "45 min",
-				price: "300",
+				price: 300,
 			},
 		],
 		businessHours: [
@@ -1787,22 +1787,22 @@ export const businessDetails = [
 			{
 				name: "Standard Apartment Cleaning",
 				duration: "2 hours",
-				price: "600",
+				price: 600,
 			},
 			{
 				name: "Deep Cleaning (Kitchen & Bathroom)",
 				duration: "3 hours",
-				price: "900",
+				price: 900,
 			},
 			{
 				name: "Move-In/Move-Out Cleaning",
 				duration: "4 hours",
-				price: "1200",
+				price: 1200,
 			},
 			{
 				name: "Office Cleaning Package",
 				duration: "3 hours",
-				price: "1000",
+				price: 1000,
 			},
 		],
 		businessHours: [
@@ -1902,22 +1902,22 @@ export const businessDetails = [
 			{
 				name: "Traditional Thai Massage",
 				duration: "60 min",
-				price: "650",
+				price: 650,
 			},
 			{
 				name: "Mindfulness Meditation Session",
 				duration: "45 min",
-				price: "300",
+				price: 300,
 			},
 			{
 				name: "Reflexology Foot Massage",
 				duration: "30 min",
-				price: "250",
+				price: 250,
 			},
 			{
 				name: "Detox Herbal Sauna",
 				duration: "45 min",
-				price: "400",
+				price: 400,
 			},
 		],
 		businessHours: [
