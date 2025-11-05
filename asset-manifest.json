@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/booking-app/static/css/main.bceae172.css",
-    "main.js": "/booking-app/static/js/main.5d152c10.js",
+    "main.js": "/booking-app/static/js/main.061b52a1.js",
     "static/media/blake-wisz-GFrBMipOd_E-unsplash.jpg": "/booking-app/static/media/blake-wisz-GFrBMipOd_E-unsplash.96cf2396eeaacb742b7c.jpg",
     "static/media/Who.png": "/booking-app/static/media/Who.6e6bd7c5e3eade736cdd.png",
     "static/media/windows-SwHvzwEzCfA-unsplash.jpg": "/booking-app/static/media/windows-SwHvzwEzCfA-unsplash.97cfc4b7f6127b2e9339.jpg",
@@ -30,10 +30,10 @@
     "static/media/zen oasis.png": "/booking-app/static/media/zen oasis.6f27382cc3fb5c20f490.png",
     "index.html": "/booking-app/index.html",
     "main.bceae172.css.map": "/booking-app/static/css/main.bceae172.css.map",
-    "main.5d152c10.js.map": "/booking-app/static/js/main.5d152c10.js.map"
+    "main.061b52a1.js.map": "/booking-app/static/js/main.061b52a1.js.map"
   },
   "entrypoints": [
     "static/css/main.bceae172.css",
-    "static/js/main.5d152c10.js"
+    "static/js/main.061b52a1.js"
   ]
 }
