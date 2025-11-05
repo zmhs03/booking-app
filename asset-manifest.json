@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/booking-app/static/css/main.858e0afd.css",
+    "main.js": "/booking-app/static/js/main.28890c8d.js",
+    "static/media/blake-wisz-GFrBMipOd_E-unsplash.jpg": "/booking-app/static/media/blake-wisz-GFrBMipOd_E-unsplash.96cf2396eeaacb742b7c.jpg",
+    "static/media/Who.png": "/booking-app/static/media/Who.6e6bd7c5e3eade736cdd.png",
+    "static/media/windows-SwHvzwEzCfA-unsplash.jpg": "/booking-app/static/media/windows-SwHvzwEzCfA-unsplash.97cfc4b7f6127b2e9339.jpg",
+    "static/media/patrick-tomasso-fMntI8HAAB8-unsplash.jpg": "/booking-app/static/media/patrick-tomasso-fMntI8HAAB8-unsplash.245f6f1bd4dd0729b5e9.jpg",
+    "static/media/What.jpg": "/booking-app/static/media/What.162868473fc7b5c6e55f.jpg",
+    "static/media/values.jpg": "/booking-app/static/media/values.92e5633fa85cd9571dd8.jpg",
+    "static/media/profile.jpg": "/booking-app/static/media/profile.4a8dd391253f7b3d7127.jpg",
+    "static/media/Stella Horse Co.png": "/booking-app/static/media/Stella Horse Co.83ed27ed66f22dd3d4c9.png",
+    "static/media/Angelina.png": "/booking-app/static/media/Angelina.9b034accb2fdc2836f80.png",
+    "static/media/Shaveson.png": "/booking-app/static/media/Shaveson.2ad7fb54f83995b743d9.png",
+    "static/media/Borcelle Pet.png": "/booking-app/static/media/Borcelle Pet.584c93e44341f5b82658.png",
+    "static/media/Juliana Silva.png": "/booking-app/static/media/Juliana Silva.ba19a80ca1ac4cb37b79.png",
+    "static/media/Logo.png": "/booking-app/static/media/Logo.4f1e78a3744bd060bb8d.png",
+    "static/media/Taylor Sweep.png": "/booking-app/static/media/Taylor Sweep.e27fdbae45c2c6316a73.png",
+    "static/media/Logo_white.png": "/booking-app/static/media/Logo_white.0c055650192bad64ef5b.png",
+    "static/media/Juliana Nail Art Studio.png": "/booking-app/static/media/Juliana Nail Art Studio.aef60bf975d2125fccd9.png",
+    "static/media/Olivia Wilson Japanese.png": "/booking-app/static/media/Olivia Wilson Japanese.46d8d10c34ceda8f2057.png",
+    "static/media/Olivia Wilson Kinesiologist.png": "/booking-app/static/media/Olivia Wilson Kinesiologist.580f4da0aa97e26bf79c.png",
+    "static/media/Dr Neil Tran.png": "/booking-app/static/media/Dr Neil Tran.286122ae6aa96668c30a.png",
+    "static/media/Rimberio.png": "/booking-app/static/media/Rimberio.2a819187ded88bfc58b2.png",
+    "static/media/Rachelle.png": "/booking-app/static/media/Rachelle.124daccb6c726bca778f.png",
+    "static/media/Isabella.png": "/booking-app/static/media/Isabella.9dbba805e6a93cdcfa60.png",
+    "static/media/Salford & Co.png": "/booking-app/static/media/Salford & Co.729aeade4f12e6ea57a3.png",
+    "static/media/Riberio.png": "/booking-app/static/media/Riberio.b93c41b174a9942645fa.png",
+    "static/media/Dr Matt Zhang.png": "/booking-app/static/media/Dr Matt Zhang.4ad2175bfc8fa554126f.png",
+    "static/media/zen oasis.png": "/booking-app/static/media/zen oasis.6f27382cc3fb5c20f490.png",
+    "index.html": "/booking-app/index.html",
+    "main.858e0afd.css.map": "/booking-app/static/css/main.858e0afd.css.map",
+    "main.28890c8d.js.map": "/booking-app/static/js/main.28890c8d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.858e0afd.css",
+    "static/js/main.28890c8d.js"
+  ]
+}
