@@ -18,17 +18,38 @@ function App() {
 		<AuthProvider>
 			<BookingProvider>
 				<ReviewProvider>
-					<BrowserRouter>
+					<BrowserRouter basename="/booking-app">
 						<Navbar />
 						<Routes>
-							<Route path="/" element={<Home />} />
-							<Route path="/Login" element={<Login />} />
-							<Route path="/SignUp" element={<SignUp />} />
-							<Route path="/About" element={<About />} />
-							<Route path="/Explore" element={<Explore />} />
-							<Route path="/Dashboard" element={<Dashboard />} />
+							<Route
+								path="/"
+								element={<Home />}
+							/>
+							<Route
+								path="/Login"
+								element={<Login />}
+							/>
+							<Route
+								path="/SignUp"
+								element={<SignUp />}
+							/>
+							<Route
+								path="/About"
+								element={<About />}
+							/>
+							<Route
+								path="/Explore"
+								element={<Explore />}
+							/>
+							<Route
+								path="/Dashboard"
+								element={<Dashboard />}
+							/>
 
-							<Route path="/business/:id" element={<BusinessProfile />} />
+							<Route
+								path="/business/:id"
+								element={<BusinessProfile />}
+							/>
 						</Routes>
 						<Footer />
 					</BrowserRouter>
